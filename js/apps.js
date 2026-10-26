@@ -263,6 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
       postLink.href = match
         ? 'https://twitter.com/intent/tweet?in_reply_to=' + match[1]
         : WL_POST_URL;
+      //https://x.com/intent/tweet?in_reply_to=2114652006963102138
     } else {
       postLink.href = repostLink.href;
     }
@@ -273,26 +274,34 @@ document.addEventListener('DOMContentLoaded', () => {
     let sending = false;
     const validWallet = () => wallet.value.trim().length > 0;
     function updateTasks() {
-      checks[4].checked = validWallet();
+      const walletCheck = checks[checks.length - 1];
+      walletCheck.checked = validWallet();
+
       let unlocked = true;
+
       rows.forEach((row, i) => {
         const locked = !unlocked || sending;
+
         row.classList.toggle('wl-task-locked', locked);
         row.inert = locked;
         row.setAttribute('aria-disabled', String(locked));
+
         row.querySelectorAll('input, button').forEach(el => {
-          el.disabled = locked || el === checks[2] || el === checks[4];
+          el.disabled = locked || el === checks[2] || el === walletCheck;
         });
+
         row.querySelectorAll('a').forEach(el => {
           el.setAttribute('aria-disabled', String(locked));
           el.tabIndex = locked ? -1 : 0;
         });
+
         unlocked = unlocked && checks[i].checked;
       });
+
       submit.disabled = sending || !checks.every(el => el.checked);
     }
     // Social tasks unlock only after their link has been opened.
-    [0, 1, 2, 3].forEach(index => {
+    [0, 1, 2].forEach(index => {
       const link = rows[index].querySelector('a');
       link.addEventListener('click', event => {
         if (rows[index].inert || sending) {
