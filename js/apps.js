@@ -241,69 +241,109 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Whitelist: user-confirmed tasks; no fake social or on-chain verification.
-  // Set data-endpoint on #wl-form-container to your application's POST endpoint.
-  // Expected response: HTTP success with JSON { "success": true }.
-  const form = document.getElementById('wl-form-container');
-  const wallet = document.getElementById('wl-wallet-input');
-  const tags = document.getElementById('wl-tagged-input');
-  const feedback = document.getElementById('wl-feedback');
-  const submit = document.getElementById('btn-submit-whitelist');
-  const validWallet = () => /^0x[a-fA-F0-9]{40}$/.test(wallet.value.trim());
-  const taggedUsers = () => tags.value.trim().split(/[\s,]+/).filter(Boolean);
-  const validTags = () => {
-    const users = taggedUsers();
-    return users.length === 3 && users.every(u => /^@[A-Za-z0-9_]{1,15}$/.test(u))
-      && new Set(users.map(u => u.toLowerCase())).size === 3;
+  // GOOGLE FORMS SETUP: replace the URL and six entry IDs below.
+  const WL_GOOGLE_FORM = {
+    formURL: 'https://docs.google.com/forms/d/e/1FAIpQLSc1HGo6fM9YXmsdSDboyvW8YZW7jnEgEHN6SkbEIrsxjmZVBQ/formResponse', 
+    entries: {
+      wallet: 'entry.1421635410',       
+    
+    }
   };
+  const form = document.getElementById('wl-form-container');
   if (form) {
-    wallet.addEventListener('input', () => { document.getElementById('chk-task-5').checked = validWallet(); });
-    tags.addEventListener('input', () => { document.getElementById('chk-task-3').checked = validTags(); });
-    form.addEventListener('submit', async event => {
+    const wallet = document.getElementById('wl-wallet-input');
+    // POST SETUP: paste the exact X post URL here.
+    // Without a post URL, the existing profile link is used.
+    const WL_POST_URL = '';
+    const postLink = document.getElementById('btn-task-3');
+    const repostLink = document.getElementById('btn-task-2');
+    if (WL_POST_URL) {
+      repostLink.href = WL_POST_URL;
+      const match = WL_POST_URL.match(/status\/(\d+)/);
+      postLink.href = match
+        ? 'https://twitter.com/intent/tweet?in_reply_to=' + match[1]
+        : WL_POST_URL;
+    } else {
+      postLink.href = repostLink.href;
+    }
+    const feedback = document.getElementById('wl-feedback');
+    const submit = document.getElementById('btn-submit-whitelist');
+    const rows = Array.from(form.querySelectorAll('.wl-task-item'));
+    const checks = rows.map(row => row.querySelector('.wl-checkbox'));
+    let sending = false;
+    const validWallet = () => wallet.value.trim().length > 0;
+    function updateTasks() {
+      checks[4].checked = validWallet();
+      let unlocked = true;
+      rows.forEach((row, i) => {
+        const locked = !unlocked || sending;
+        row.classList.toggle('wl-task-locked', locked);
+        row.inert = locked;
+        row.setAttribute('aria-disabled', String(locked));
+        row.querySelectorAll('input, button').forEach(el => {
+          el.disabled = locked || el === checks[2] || el === checks[4];
+        });
+        row.querySelectorAll('a').forEach(el => {
+          el.setAttribute('aria-disabled', String(locked));
+          el.tabIndex = locked ? -1 : 0;
+        });
+        unlocked = unlocked && checks[i].checked;
+      });
+      submit.disabled = sending || !checks.every(el => el.checked);
+    }
+    // Social tasks unlock only after their link has been opened.
+    [0, 1, 2, 3].forEach(index => {
+      const link = rows[index].querySelector('a');
+      link.addEventListener('click', event => {
+        if (rows[index].inert || sending) {
+          event.preventDefault();
+          return;
+        }
+        // Keep the native link navigation and mark the visit.
+        checks[index].checked = true;
+        updateTasks();
+      });
+    });
+    wallet.addEventListener('input', updateTasks);
+    form.addEventListener('click', event => {
+      if (event.target.closest('.wl-task-locked')) event.preventDefault();
+    });
+    async function handleSubmitWhitelist(event) {
       event.preventDefault();
+      updateTasks();
       if (submit.disabled) return;
-      if (!validTags()) {
-        feedback.textContent = 'Enter three different X usernames, each starting with @.';
-        tags.focus(); return;
-      }
-      if (!validWallet()) {
-        feedback.textContent = 'Enter a valid EVM/Robinhood Chain address: 0x followed by 40 hexadecimal characters.';
-        wallet.focus(); return;
-      }
-      const tasks = Array.from(form.querySelectorAll('.wl-checkbox'));
-      const incomplete = tasks.find(task => !task.checked);
-      if (incomplete) {
-        feedback.textContent = 'Please complete and confirm all five tasks before submitting.';
-        incomplete.focus(); return;
-      }
-      const endpoint = form.dataset.endpoint.trim();
-      if (!endpoint) {
-        feedback.textContent = 'Applications are not open for online submission yet. Your application has not been sent. Please check back soon.';
+      const config = WL_GOOGLE_FORM;
+      if (!/^https:\/\/docs\.google\.com\/forms\/d\/e\/[^/]+\/formResponse$/.test(config.formURL)
+          || !Object.values(config.entries).every(id => /^entry\.\d+$/.test(id))) {
+        feedback.textContent = 'Applications are not open yet. Please check back soon.';
         return;
       }
-      submit.disabled = true;
+      const formData = new FormData();
+      formData.append(config.entries.wallet, wallet.value.trim());
+      formData.append(config.entries.taggedUsers, 'Yes');
+      formData.append(config.entries.followX, 'Yes');
+      formData.append(config.entries.repost, 'Yes');
+      formData.append(config.entries.discord, 'Yes');
+      formData.append(config.entries.submittedAt, new Date().toISOString());
+      sending = true;
+      updateTasks();
       submit.textContent = 'SUBMITTING...';
       feedback.textContent = '';
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 15000);
       try {
-        const response = await fetch(endpoint, {
-          method: 'POST', headers: { 'Content-Type': 'application/json' },
-          signal: controller.signal,
-          body: JSON.stringify({ wallet: wallet.value.trim(), taggedUsers: taggedUsers(), tasks: tasks.map(t => ({ id: t.id, confirmed: t.checked })) })
-        });
-        const result = await response.json();
-        if (!response.ok || result.success !== true) throw new Error('Submission not accepted');
-        feedback.textContent = 'Application submitted. Thank you for applying to Hood Maxxers!';
+        await fetch(config.formURL, { method: 'POST', body: formData, mode: 'no-cors' });
+        // Google Forms returns an opaque response; acceptance cannot be verified.
+        feedback.textContent = 'Application sent. Receipt could not be verified automatically.';
         form.reset();
       } catch (error) {
-        feedback.textContent = 'Submission could not be confirmed. Please try again later.';
+        feedback.textContent = 'Could not send your application. Please try again.';
       } finally {
-        clearTimeout(timeout);
-        submit.disabled = false;
+        sending = false;
         submit.textContent = 'SUBMIT APPLICATION';
+        updateTasks();
       }
-    });
+    }
+    form.addEventListener('submit', handleSubmitWhitelist);
+    updateTasks();
   }
 
   // Native buttons support mouse, touch, Enter and Space.

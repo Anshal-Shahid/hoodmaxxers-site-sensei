@@ -1807,3 +1807,11 @@
   #win-whitelist .window-content, #win-maxxin .maxxin-guide { padding: 10px !important; }
   #win-nft .window-statusbar, #win-maxxin .window-statusbar { flex-wrap: wrap; gap: 4px; }
 }
+
+/* Sequential whitelist tasks */
+.wl-task-locked { opacity: .42; filter: grayscale(1); cursor: not-allowed; }
+.wl-task-locked a { pointer-events: none; }
+#btn-submit-whitelist:disabled { opacity: .45; cursor: not-allowed; }
+
+/* Completion is driven by link visits and valid inputs. */
+#wl-form-container .wl-checkbox { display: none; }
