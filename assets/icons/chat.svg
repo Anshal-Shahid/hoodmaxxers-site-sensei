@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Rocket / Messenger icon like in reference -->
+  <path d="M6 26 L12 20 L24 8 C25 7 27 7 28 8 C29 9 29 11 28 12 L16 24 L10 26 Z" fill="#ff3333" stroke="#880000" stroke-width="1.5"/>
+  <path d="M22 6 C26 4 28 4 29 5 C30 6 30 8 28 12 C25 15 20 18 16 20 L14 18 L16 16 L18 18 L24 12 L20 10 C20 10 21 7 22 6 Z" fill="#ff8800"/>
+  <polygon points="7,25 2,27 4,22" fill="#ffd700" stroke="#885500" stroke-width="1"/>
+  <circle cx="22" cy="10" r="2" fill="#ffffff"/>
+  <circle cx="22" cy="10" r="1" fill="#0088ff"/>
+</svg>

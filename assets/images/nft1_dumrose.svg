@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" shape-rendering="crispEdges">
+  <rect width="64" height="64" fill="#1e1b4b"/>
+  <!-- Hair: Auburn Red Bouffant -->
+  <rect x="18" y="8" width="28" height="18" fill="#d9480f"/>
+  <rect x="14" y="14" width="36" height="22" fill="#e8590c"/>
+  <rect x="12" y="22" width="10" height="16" fill="#d9480f"/>
+  <rect x="42" y="22" width="10" height="16" fill="#d9480f"/>
+  <!-- Face -->
+  <rect x="20" y="20" width="24" height="22" fill="#fed7aa"/>
+  <!-- Hair clip green -->
+  <rect x="40" y="16" width="4" height="4" fill="#51cf66"/>
+  <!-- Spectacles / Eyes -->
+  <rect x="22" y="26" width="8" height="6" fill="#ffffff" stroke="#1864ab" stroke-width="2"/>
+  <rect x="34" y="26" width="8" height="6" fill="#ffffff" stroke="#1864ab" stroke-width="2"/>
+  <rect x="30" y="28" width="4" height="2" fill="#1864ab"/>
+  <rect x="25" y="28" width="2" height="2" fill="#000000"/>
+  <rect x="37" y="28" width="2" height="2" fill="#000000"/>
+  <!-- Red ban tape on mouth -->
+  <rect x="22" y="36" width="20" height="3" fill="#e03131"/>
+  <!-- Neck & Clothes -->
+  <rect x="26" y="42" width="12" height="4" fill="#fed7aa"/>
+  <rect x="16" y="46" width="32" height="18" fill="#69db7c" stroke="#2b8a3e" stroke-width="2"/>
+  <rect x="28" y="46" width="8" height="8" fill="#ffffff"/>
+</svg>

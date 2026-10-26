@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Hood Maxxers - Official Web3 Trading League Desktop
+  </title>
+  <!-- Retro Pixel & Modern Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;family=VT323&amp;family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+  <!-- Stylesheets -->
+  <link href="css/retro.css" rel="stylesheet"/>
+  <link href="css/apps.css" rel="stylesheet"/>
+  <link href="assets/icons/about_us.png" rel="icon" type="image/png"/>
+  <script src="js/asset-loader.js"></script>
+ </head>
+ <body>
+  <!-- ==========================================
+       DESKTOP ENVIRONMENT
+       ========================================== -->
+  <div class="theme-bliss" id="desktop">
+   <!-- DESKTOP APPS / ICONS (LEFT COLUMN) -->
+   <div id="desktop-icons">
+    <!-- 1. About us -->
+    <div class="desktop-icon" data-url="https://hoodmaxxers.gitbook.io/hoodmaxxers-docs/" title="About us - GitBook Documentation">
+     <img alt="About us" class="icon-img" src="assets/icons/custom/about_us.png"/>
+     <span class="icon-label">
+      About us
+     </span>
+    </div>
+    <!-- 2. Whitelist Application -->
+    <div class="desktop-icon" data-window="win-whitelist" title="Whitelist Application">
+     <img alt="Whitelist Application" class="icon-img" src="assets/icons/custom/wl_application.png"/>
+     <span class="icon-label">
+      WL Application
+     </span>
+    </div>
+    <!-- 3. MAXXERS NFT -->
+    <div class="desktop-icon" data-window="win-nft" title="MAXXERS NFT Showcase">
+     <img alt="MAXXERS NFT" class="icon-img" src="assets/icons/custom/maxxers_nft.png"/>
+     <span class="icon-label">
+      MAXXERS NFT
+     </span>
+    </div>
+    <!-- 4. $MAXXERS -->
+    <div class="desktop-icon" data-window="win-token" title="$MAXXERS Token Details">
+     <img alt="$MAXXERS" class="icon-img" src="assets/icons/custom/maxxers_token.png"/>
+     <span class="icon-label">
+      $MAXXERS
+     </span>
+    </div>
+    <!-- 5. MAXX IN -->
+    <div class="desktop-icon" data-window="win-maxxin" title="MAXX IN Portal">
+     <img alt="MAXX IN" class="icon-img" src="assets/icons/custom/maxx_in.png"/>
+     <span class="icon-label">
+      MAXX IN
+     </span>
+    </div>
+    <!-- 6. MAXX LEAGUE -->
+    <div class="desktop-icon" data-window="win-league" title="MAXX LEAGUE Leaderboard">
+     <img alt="MAXX LEAGUE" class="icon-img" src="assets/icons/custom/maxx_league.png"/>
+     <span class="icon-label">
+      MAXX LEAGUE
+     </span>
+    </div>
+    <!-- 7. DASHBOARD -->
+    <div class="desktop-icon" data-window="win-dashboard" title="DASHBOARD - Trading Terminal">
+     <img alt="DASHBOARD" class="icon-img" src="assets/icons/custom/dashboard.png"/>
+     <span class="icon-label">
+      DASHBOARD
+     </span>
+    </div>
+    <!-- 8. MAXX OUT -->
+    <div class="desktop-icon" data-window="win-maxxout" title="MAXX OUT - Prize Claims">
+     <img alt="MAXX OUT" class="icon-img" src="assets/icons/custom/maxx_out.png"/>
+     <span class="icon-label">
+      MAXX OUT
+     </span>
+    </div>
+    <!-- 9. Discord -->
+    <div class="desktop-icon" data-url="https://discord.gg/NNkqvwbwMb" title="Discord Community">
+     <img alt="Discord" class="icon-img" src="assets/icons/custom/discord.png"/>
+     <span class="icon-label">
+      Discord
+     </span>
+    </div>
+    <!-- 10. X -->
+    <div class="desktop-icon" data-url="https://x.com/HoodMaxxers" title="Official X (@HoodMaxxers)">
+     <img alt="X" class="icon-img" src="assets/icons/custom/x.png"/>
+     <span class="icon-label">
+      X
+     </span>
+    </div>
+    <!-- 11. Opensea -->
+    <div class="desktop-icon" data-window="win-opensea" title="OpenSea Collection">
+     <img alt="Opensea" class="icon-img" src="assets/icons/custom/opensea.png"/>
+     <span class="icon-label">
+      Opensea
+     </span>
+    </div>
+    <!-- 12. FAQ -->
+    <div class="desktop-icon" data-window="win-faq" title="FAQ - Knowledge Base">
+     <img alt="FAQ" class="icon-img" src="assets/icons/custom/faq.png"/>
+     <span class="icon-label">
+      FAQ
+     </span>
+    </div>
+   </div>
+   <!-- ==========================================
+         APPLICATION WINDOWS (POP-UP PC PLATFORMS)
+         ========================================== -->
+   <!-- WINDOW 1: DASHBOARD (Coming Soon) -->
+   <div aria-labelledby="win-dashboard-title" class="window hidden retro-coming-soon" data-icon="assets/icons/custom/dashboard.png" data-title="DASHBOARD" id="win-dashboard" role="dialog" style="width: 390px;">
+    <div class="window-titlebar">
+     <div class="window-title">
+      <span id="win-dashboard-title">
+       DASHBOARD
+      </span>
+     </div>
+     <div class="window-controls">
+      <button aria-label="Close DASHBOARD" class="window-btn btn-close">
+       ✕
+      </button>
+     </div>
+    </div>
+    <div class="window-content">
+     <div class="retro-message">
+      <span aria-hidden="true" class="retro-error-icon">
+       !
+      </span>
+      <div>
+       <h3>
+        COMING SOON
+       </h3>
+       <p>
+        DASHBOARD is not available yet.
+        <br/>
+        Check back for updates.
+       </p>
+      </div>
+     </div>
+     <div class="retro-dialog-actions">
+      <button class="win-button" onclick="window.OSWindowManager.closeWindow('win-dashboard')">
+       OK
+      </button>
+     </div>
+    </div>
+   </div>
+   <!-- WINDOW 2: WHITELIST APPLICATION -->
+   <div class="window hidden" data-icon="assets/icons/custom/wl_application.png" data-title="Whitelist Application" id="win-whitelist" style="top: 55px; left: 160px; width: 620px;">
+    <div class="window-titlebar">
+     <div class="window-title">
+      <img alt="" class="window-title-icon" src="assets/icons/custom/wl_application.png"/>
+      <span>
+       Whitelist Application - Hood Maxxers Official
+      </span>
+     </div>
+     <div class="window-controls">
+      <button class="window-btn btn-minimize">
+       _
+      </button>
+      <button class="window-btn btn-maximize">
+       🗖
+      </button>
+      <button class="window-btn btn-close">
+       ✕
+      </button>
+     </div>
+    </div>
+    <div class="window-menubar">
+     <span class="menu-item">
+      <u>
+       F
+      </u>
+      ile
+     </span>
+     <span class="menu-item">
+      <u>
+       V
+      </u>
+      erify
+     </span>
+     <span class="menu-item">
+      <u>
+       H
+      </u>
+      elp
+     </span>
+    </div>
+    <div class="window-content" style="padding: 16px;">
+     <div style="background: #f8fafc; border: 1px solid #cbd5e1; padding: 12px; border-radius: 6px; margin-bottom: 12px;">
+      <h3 style="font-size: 13px; color: #1e293b; margin-bottom: 4px;">
+       Hood Maxxers Whitelist Application
+      </h3>
+      <p style="font-size: 11px; color: #64748b;">
+       Complete the 5 tasks below to secure your allowlist spot for the upcoming Hood Maxxers NFT Collection. Completing all tasks will grant you a FCFS spot.
+      </p>
+     </div>
+     <form data-endpoint="" id="wl-form-container" novalidate="">
+      <div class="wl-tasks-wrapper">
+       <!-- Task 1: Follow on X -->
+       <div class="wl-task-item">
+        <div class="wl-task-left">
+         <input aria-label="Confirm task 1 completed" class="wl-checkbox" id="chk-task-1" type="checkbox"/>
+         <div>
+          <div class="wl-task-title">
+           1. Follow @HoodMaxxers on X
+          </div>
+          <div class="wl-task-desc">
+           Stay updated with official competition announcements and league schedules.
+          </div>
+         </div>
+        </div>
+        <a class="win-button btn-primary" href="https://x.com/HoodMaxxers" id="btn-task-1" rel="noopener noreferrer" style="font-size: 10px; padding: 4px 10px; text-decoration: none;" target="_blank">
+         Follow on X
+        </a>
+       </div>
+       <!-- Task 2: Like & Repost -->
+       <div class="wl-task-item">
+        <div class="wl-task-left">
+         <input aria-label="Confirm task 2 completed" class="wl-checkbox" id="chk-task-2" type="checkbox"/>
+         <div>
+          <div class="wl-task-title">
+           2. Like &amp; Repost Pinned Post
+          </div>
+          <div class="wl-task-desc">
+           Spread the word about the Hood Maxxers revolution.
+          </div>
+         </div>
+        </div>
+        <a class="win-button" href="https://x.com/HoodMaxxers" id="btn-task-2" rel="noopener noreferrer" style="font-size: 10px; padding: 4px 10px; text-decoration: none;" target="_blank">
+         View Post
+        </a>
+       </div>
+       <!-- Task 3: Tag 3 MAXXERS -->
+       <div class="wl-task-item" style="align-items: flex-start;">
+        <div class="wl-task-left" style="width: 100%;">
+         <input aria-label="Confirm task 3 completed" class="wl-checkbox" id="chk-task-3" style="margin-top: 4px;" type="checkbox"/>
+         <div style="flex: 1;">
+          <div class="wl-task-title">
+           3. Tag 3 MAXXERS on the post
+          </div>
+          <div class="wl-task-desc" style="margin-bottom: 6px;">
+           Enter the X usernames of 3 fellow maxxers you tagged:
+          </div>
+          <input aria-label="Three tagged X usernames" id="wl-tagged-input" placeholder="@maxxer1 @maxxer2 @maxxer3" style="width: 100%; font-size: 11px; padding: 4px 8px; border: 1px solid #cbd5e1; border-radius: 4px;" type="text"/>
+         </div>
+        </div>
+       </div>
+       <!-- Task 4: Join Discord -->
+       <div class="wl-task-item">
+        <div class="wl-task-left">
+         <input aria-label="Confirm task 4 completed" class="wl-checkbox" id="chk-task-4" type="checkbox"/>
+         <div>
+          <div class="wl-task-title">
+           4. Join Official Discord Server
+          </div>
+          <div class="wl-task-desc">
+           Join our discord community for more details and updates
+          </div>
+         </div>
+        </div>
+        <a class="win-button btn-primary" href="https://discord.gg/NNkqvwbwMb" id="btn-task-4" rel="noopener noreferrer" style="font-size: 10px; padding: 4px 10px; background: #5865f2; color: #fff; text-decoration: none;" target="_blank">
+         Join Discord
+        </a>
+       </div>
+       <!-- Task 5: Submit Wallet -->
+       <div class="wl-task-item" style="align-items: flex-start;">
+        <div class="wl-task-left" style="width: 100%;">
+         <input aria-label="Confirm task 5 completed" class="wl-checkbox" id="chk-task-5" style="margin-top: 4px;" type="checkbox"/>
+         <div style="flex: 1;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+           <div class="wl-task-title">
+            5. Submit Wallet
+           </div>
+          </div>
+          <input aria-label="EVM/Robinhood Chain wallet address" id="wl-wallet-input" placeholder="0x... (EVM/Robinhood Chain)" style="width: 100%; font-size: 11px; padding: 5px 8px; border: 1px solid #cbd5e1; border-radius: 4px; font-family: monospace;" type="text"/>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 14px; border-top: 1px solid #cbd5e1; padding-top: 12px;">
+       <button class="win-button btn-primary" id="btn-submit-whitelist" style="background: #15803d; color: #fff; padding: 8px 18px; font-weight: bold; font-size: 12px;" type="submit">
+        SUBMIT APPLICATION
+       </button>
+      </div>
+      <p aria-live="polite" class="wl-feedback" id="wl-feedback" role="status">
+      </p>
+     </form>
+     <!-- Generated Pass Certificate Result (Hidden initially) -->
+    </div>
+    <div class="window-statusbar">
+     <span>
+      Hood Maxxers Whitelist
+     </span>
+     <span>
+      EVM/Robinhood Chain
+     </span>
+    </div>
+   </div>
+   <!-- WINDOW 3: MAXXERS NFT (Collection & Trait Showcase) -->
+   <div class="window hidden" data-icon="assets/icons/custom/maxxers_nft.png" data-title="MAXXERS NFT" id="win-nft" style="top: 50px; left: 120px; width: 880px;">
+    <div class="window-titlebar">
+     <div class="window-title">
+      <img alt="" class="window-title-icon" src="assets/icons/custom/maxxers_nft.png"/>
+      <span>
+       MAXXERS NFT - Sneak Peek
+      </span>
+     </div>
+     <div class="window-controls">
+      <button class="window-btn btn-minimize">
+       _
+      </button>
+      <button class="window-btn btn-maximize">
+       🗖
+      </button>
+      <button class="window-btn btn-close">
+       ✕
+      </button>
+     </div>
+    </div>
+    <div class="window-menubar">
+     <span class="menu-item">
+      <u>
+       V
+      </u>
+      iew
+     </span>
+     <span class="menu-item">
+      <u>
+       T
+      </u>
+      raits
+     </span>
+     <span class="menu-item">
+      <u>
+       R
+      </u>
+      arity
+     </span>
+     <span class="menu-item">
+      <u>
+       H
+      </u>
+      elp
+     </span>
+    </div>
+    <div class="window-content nft-content">
+     <header class="retro-section-heading">
+      <h3>
+       HOOD MAXXERS NFT SNEAK PEEK
+      </h3>
+      <p>
+       4,444 handcrafted Hood Maxxers NFTs coming soon to Robinhood Chain.
+      </p>
+     </header>
+     <div class="nft-showcase-layout">
+      <div class="nft-cards-grid">
+       <button aria-pressed="true" class="nft-card-item active" data-name="MAXXER 01" type="button">
+        <img alt="MAXXER 01 artwork" class="nft-card-thumb" src="assets/images/nfts/nft-01.png" data-nft-number="01"/>
+        <strong>MAXXER 01</strong>
+        <span>ART PREVIEW 01</span>
+       </button>
+       <button aria-pressed="false" class="nft-card-item" data-name="MAXXER 02" type="button">
+        <img alt="MAXXER 02 artwork" class="nft-card-thumb" src="assets/images/nfts/nft-02.png" data-nft-number="02"/>
+        <strong>MAXXER 02</strong>
+        <span>ART PREVIEW 02</span>
+       </button>
+       <button aria-pressed="false" class="nft-card-item" data-name="MAXXER 03" type="button">
+        <img alt="MAXXER 03 artwork" class="nft-card-thumb" src="assets/images/nfts/nft-03.png" data-nft-number="03"/>
+        <strong>MAXXER 03</strong>
+        <span>ART PREVIEW 03</span>
+       </button>
+       <button aria-pressed="false" class="nft-card-item" data-name="MAXXER 04" type="button">
+        <img alt="MAXXER 04 artwork" class="nft-card-thumb" src="assets/images/nfts/nft-04.png" data-nft-number="04"/>
+        <strong>MAXXER 04</strong>
+        <span>ART PREVIEW 04</span>
+       </button>
+       <button aria-pressed="false" class="nft-card-item" data-name="MAXXER 05" type="button">
+        <img alt="MAXXER 05 artwork" class="nft-card-thumb" src="assets/images/nfts/nft-05.png" data-nft-number="05"/>
+        <strong>MAXXER 05</strong>
+        <span>ART PREVIEW 05</span>
+       </button>
+       <button aria-pressed="false" class="nft-card-item" data-name="MAXXER 06" type="button">
+        <img alt="MAXXER 06 artwork" class="nft-card-thumb" src="assets/images/nfts/nft-06.png" data-nft-number="06"/>
+        <strong>MAXXER 06</strong>
+        <span>ART PREVIEW 06</span>
+       </button>
+       <button aria-pressed="false" class="nft-card-item" data-name="MAXXER 07" type="button">
+        <img alt="MAXXER 07 artwork" class="nft-card-thumb" src="assets/images/nfts/nft-07.png" data-nft-number="07"/>
+        <strong>MAXXER 07</strong>
+        <span>ART PREVIEW 07</span>
+       </button>
+       <button aria-pressed="false" class="nft-card-item" data-name="MAXXER 08" type="button">
+        <img alt="MAXXER 08 artwork" class="nft-card-thumb" src="assets/images/nfts/nft-08.png" data-nft-number="08"/>
+        <strong>MAXXER 08</strong>
+        <span>ART PREVIEW 08</span>
+       </button>
+       <button aria-pressed="false" class="nft-card-item" data-name="MAXXER 09" type="button">
+        <img alt="MAXXER 09 artwork" class="nft-card-thumb" src="assets/images/nfts/nft-09.png" data-nft-number="09"/>
+        <strong>MAXXER 09</strong>
+        <span>ART PREVIEW 09</span>
+       </button>
+       <button aria-pressed="false" class="nft-card-item" data-name="MAXXER 10" type="button">
+        <img alt="MAXXER 10 artwork" class="nft-card-thumb" src="assets/images/nfts/nft-10.png" data-nft-number="10"/>
+        <strong>MAXXER 10</strong>
+        <span>ART PREVIEW 10</span>
+       </button>
+       <button aria-pressed="false" class="nft-card-item" data-name="MAXXER 11" type="button">
+        <img alt="MAXXER 11 artwork" class="nft-card-thumb" src="assets/images/nfts/nft-11.png" data-nft-number="11"/>
+        <strong>MAXXER 11</strong>
+        <span>ART PREVIEW 11</span>
+       </button>
+       <button aria-pressed="false" class="nft-card-item" data-name="MAXXER 12" type="button">
+        <img alt="MAXXER 12 artwork" class="nft-card-thumb" src="assets/images/nfts/nft-12.png" data-nft-number="12"/>
+        <strong>MAXXER 12</strong>
+        <span>ART PREVIEW 12</span>
+       </button>
+      </div>
+      <aside aria-live="polite" class="nft-trait-panel">
+       <h4>
+        TRAIT DETAILS
+       </h4>
+       <strong id="inspect-nft-name">MAXXER 01</strong>
+       <p>
+        MORE DETAILS SOON
+       </p>
+      </aside>
+     </div>
+    </div>
+    <div class="window-statusbar">
+     <span>
+      Collection Size: 4,444 NFTs
+     </span>
+     <span>
+      Robinhood Chain
+     </span>
+    </div>
+   </div>
+   <!-- WINDOW 4: $MAXXERS TOKEN DETAILS -->
+   <div class="window hidden" data-icon="assets/icons/custom/maxxers_token.png" data-title="$MAXXERS" id="win-token" style="top: 70px; left: 200px; width: 620px;">
+    <div class="window-titlebar">
+     <div class="window-title">
+      <img alt="" class="window-title-icon" src="assets/icons/custom/maxxers_token.png"/>
+      <span>
+       $MAXXERS - Ecosystem Token &amp; The MAXX System
+      </span>
+     </div>
+     <div class="window-controls">
+      <button class="window-btn btn-minimize">
+       _
+      </button>
+      <button class="window-btn btn-maximize">
+       🗖
+      </button>
+      <button class="window-btn btn-close">
+       ✕
+      </button>
+     </div>
+    </div>
+    <div class="window-menubar">
+     <span class="menu-item">
+      <u>
+       E
+      </u>
+      cosystem
+     </span>
+     <span class="menu-item">
+      <u>
+       U
+      </u>
+      tility
+     </span>
+     <span class="menu-item">
+      <u>
+       D
+      </u>
+      ocs
+     </span>
+    </div>
+    <div class="window-content" style="padding: 16px;">
+     <!-- Prominent Highlight Banner: TOKENOMICS DETAILS SOON -->
+     <div class="badge-tokenomics-soon">
+      <span>
+       ⚡
+      </span>
+      <span>
+       TOKENOMICS DETAILS SOON
+      </span>
+      <span>
+       ⚡
+      </span>
+     </div>
+     <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 14px; margin-bottom: 12px;">
+      <h3 style="font-size: 14px; color: #0f172a; margin-bottom: 6px;">
+       What is the $MAXXER Token?
+      </h3>
+      <p style="font-size: 12px; color: #334155; line-height: 1.5; margin-bottom: 10px;">
+       <strong>
+        $MAXXER
+       </strong>
+       is the utility token that powers participation in the Hood Maxxers ecosystem. Its primary role is simple:
+       <strong>
+        $MAXXER activates MAXXERS. Without $MAXXER, you can't MAXX IN.
+       </strong>
+      </p>
+      <div style="background: #f1f5f9; border-left: 4px solid #f59e0b; padding: 8px 12px; font-size: 11.5px; color: #1e293b;">
+       <strong>
+        The Golden Rule:
+       </strong>
+       <em>
+        "NFT gives you the opportunity. $MAXXER lets you use it. NO $MAXXER, NO MAXX IN."
+       </em>
+      </div>
+     </div>
+     <!-- The Activation Mechanics Breakdown -->
+     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px;">
+      <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px;">
+       <div style="font-size: 10px; color: #64748b; font-weight: bold;">
+        ACTIVATION FEE
+       </div>
+       <div style="font-size: 16px; font-weight: bold; color: #0f172a; margin: 4px 0;">
+        10,000 $MAXXER
+       </div>
+       <p style="font-size: 11px; color: #64748b;">
+        Fixed activation cost required for every Maxxer NFT, regardless of rarity tier (Common to Legendary).
+       </p>
+      </div>
+      <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px;">
+       <div style="font-size: 10px; color: #64748b; font-weight: bold;">
+        50% POOL / 50% BURN
+       </div>
+       <div style="font-size: 16px; font-weight: bold; color: #16a34a; margin: 4px 0;">
+        5,000 Pool / 5,000 Burn
+       </div>
+       <p style="font-size: 11px; color: #64748b;">
+        5,000 $MAXXER funds the MAXX POOL prize rewards for top 300 traders; 5,000 is permanently burned from supply!
+       </p>
+      </div>
+     </div>
+     <!-- Direct Link CTA to Official GitBook -->
+     <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #cbd5e1; padding-top: 12px;">
+      <span style="font-size: 11px; color: #64748b;">
+       Official Gitbook Documentation:
+      </span>
+      <a class="win-button btn-primary" href="https://hoodmaxxers.gitbook.io/hoodmaxxers-docs/the-maxx-system/usdmaxxer" rel="noopener noreferrer" style="font-size: 11px; padding: 6px 14px; text-decoration: none;" target="_blank">
+       Read $MAXXER Docs ↗
+      </a>
+     </div>
+    </div>
+    <div class="window-statusbar">
+     <span>
+      Utility: Activation &amp; Burn Engine
+     </span>
+     <span>
+      Network: Robinhood Chain
+     </span>
+    </div>
+   </div>
+   <!-- WINDOW 5: MAXX IN (Staking Vault & Alert) -->
+   <div class="window hidden" data-icon="assets/icons/custom/maxx_in.png" data-title="MAXX IN" id="win-maxxin" style="top: 40px; left: 160px; width: 720px;">
+    <div class="window-titlebar">
+     <div class="window-title">
+      <img alt="" class="window-title-icon" src="assets/icons/custom/maxx_in.png"/>
+      <span>
+       MAXX IN - Lock NFT &amp; Convert to MAXX CASH
+      </span>
+     </div>
+     <div class="window-controls">
+      <button class="window-btn btn-minimize">
+       _
+      </button>
+      <button class="window-btn btn-maximize">
+       🗖
+      </button>
+      <button class="window-btn btn-close">
+       ✕
+      </button>
+     </div>
+    </div>
+    <div class="window-menubar">
+     <span class="menu-item">
+      <u>
+       S
+      </u>
+      take
+     </span>
+     <span class="menu-item">
+      <u>
+       V
+      </u>
+      ault
+     </span>
+     <span class="menu-item">
+      <u>
+       H
+      </u>
+      elp
+     </span>
+    </div>
+    <div class="window-content maxxin-guide">
+     <header class="maxxin-heading">
+      <img alt="" src="assets/icons/custom/maxx_in.png"/>
+      <div>
+       <h2>
+        MAXX IN
+       </h2>
+       <span class="retro-locked-label">
+        STATUS: LOCKED
+       </span>
+      </div>
+     </header>
+     <div class="retro-notice">
+      <strong>
+       MAXX IN is currently locked.
+      </strong>
+      You’ll need a Hood Maxxers NFT and $MAXXER to enter the competition.
+     </div>
+     <p class="guide-intro">
+      Once the NFT and token launch, here’s how it works:
+     </p>
+     <ol class="maxxin-steps">
+      <li>
+       <strong>
+        CONNECT YOUR WALLET
+       </strong>
+       <p>
+        Connect the wallet holding your MAXXER NFT and $MAXXER.
+       </p>
+      </li>
+      <li>
+       <strong>
+        MAXX IN
+       </strong>
+       <p>
+        Use 10,000 $MAXXER to activate each MAXXER NFT you want to enter into the competition.
+       </p>
+      </li>
+      <li>
+       <strong>
+        RECEIVE MAXX CASH
+       </strong>
+       <p>
+        Each activated MAXXER receives virtual trading capital based on its rarity. This is your starting balance for the competition.
+       </p>
+      </li>
+      <li>
+       <strong>
+        TRADE &amp; COMPETE
+       </strong>
+       <p>
+        Use your MAXX CASH to trade across six Stock Token markets: AAPL, TSLA, NVDA, GOOG, AMZN, and MSFT.
+       </p>
+      </li>
+      <li>
+       <strong>
+        CLIMB THE LEADERBOARD
+       </strong>
+       <p>
+        Your portfolio performance determines your rank against other competitors.
+       </p>
+      </li>
+      <li>
+       <strong>
+        MAXX PAY
+       </strong>
+       <p>
+        When the competition ends, eligible winners receive rewards according to the competition’s reward rules. The top 300 are eligible for weekly rewards.
+       </p>
+      </li>
+      <li>
+       <strong>
+        MAXX OUT
+       </strong>
+       <p>
+        After the results and rewards are settled, your MAXXER unlocks so you can transfer it or enter another competition.
+       </p>
+      </li>
+     </ol>
+     <div class="retro-notice maxxin-important">
+      <strong>
+       IMPORTANT:
+      </strong>
+      MAXX CASH is virtual trading capital, not real cash. It cannot be withdrawn as cash and does not guarantee rewards. Your MAXXER remains locked while the competition is active.
+     </div>
+     <p class="maxxin-cycle">
+      <strong>
+       The cycle:
+      </strong>
+      MAXX IN → MAXX CASH → TRADE → LEADERBOARD → MAXX PAY → MAXX OUT → MAXX AGAIN.
+     </p>
+     <div class="maxxin-actions">
+      <button class="win-button" onclick="window.OSWindowManager.openWindow('win-whitelist')">
+       Whitelist Application
+      </button>
+      <button class="win-button" disabled="">
+       MAXX IN — LOCKED
+      </button>
+     </div>
+    </div>
+    <div class="window-statusbar">
+     <span>
+      Status: Awaiting launch
+     </span>
+     <span>
+      NFT locked during active competition
+     </span>
+    </div>
+   </div>
+   <!-- WINDOW 6: MAXX LEAGUE (Leaderboard Template) -->
+   <div aria-labelledby="win-league-title" class="window hidden retro-coming-soon" data-icon="assets/icons/custom/maxx_league.png" data-title="MAXX LEAGUE" id="win-league" role="dialog" style="width: 390px;">
+    <div class="window-titlebar">
+     <div class="window-title">
+      <span id="win-league-title">
+       MAXX LEAGUE
+      </span>
+     </div>
+     <div class="window-controls">
+      <button aria-label="Close MAXX LEAGUE" class="window-btn btn-close">
+       ✕
+      </button>
+     </div>
+    </div>
+    <div class="window-content">
+     <div class="retro-message">
+      <span aria-hidden="true" class="retro-error-icon">
+       !
+      </span>
+      <div>
+       <h3>
+        COMING SOON
+       </h3>
+       <p>
+        MAXX LEAGUE is not available yet.
+        <br/>
+        Check back for updates.
+       </p>
+      </div>
+     </div>
+     <div class="retro-dialog-actions">
+      <button class="win-button" onclick="window.OSWindowManager.closeWindow('win-league')">
+       OK
+      </button>
+     </div>
+    </div>
+   </div>
+   <!-- WINDOW 7: MAXX OUT (Reward Claims) -->
+   <div aria-labelledby="win-maxxout-title" class="window hidden retro-coming-soon" data-icon="assets/icons/custom/maxx_out.png" data-title="MAXX OUT" id="win-maxxout" role="dialog" style="width: 390px;">
+    <div class="window-titlebar">
+     <div class="window-title">
+      <span id="win-maxxout-title">
+       MAXX OUT
+      </span>
+     </div>
+     <div class="window-controls">
+      <button aria-label="Close MAXX OUT" class="window-btn btn-close">
+       ✕
+      </button>
+     </div>
+    </div>
+    <div class="window-content">
+     <div class="retro-message">
+      <span aria-hidden="true" class="retro-error-icon">
+       !
+      </span>
+      <div>
+       <h3>
+        COMING SOON
+       </h3>
+       <p>
+        MAXX OUT is not available yet.
+        <br/>
+        Check back for updates.
+       </p>
+      </div>
+     </div>
+     <div class="retro-dialog-actions">
+      <button class="win-button" onclick="window.OSWindowManager.closeWindow('win-maxxout')">
+       OK
+      </button>
+     </div>
+    </div>
+   </div>
+   <!-- WINDOW 8: OPENSEA (Animated Launching Screen) -->
+   <div class="window hidden" data-icon="assets/icons/custom/opensea.png" data-title="Opensea" id="win-opensea" style="top: 85px; left: 210px; width: 540px;">
+    <div class="window-titlebar">
+     <div class="window-title">
+      <img alt="" class="window-title-icon" src="assets/icons/custom/opensea.png"/>
+      <span>
+       OpenSea - Hood Maxxers Verified Collection
+      </span>
+     </div>
+     <div class="window-controls">
+      <button class="window-btn btn-minimize">
+       _
+      </button>
+      <button class="window-btn btn-close">
+       ✕
+      </button>
+     </div>
+    </div>
+    <div class="window-content" style="padding: 24px; text-align: center; background: #0b1120; color: #ffffff;">
+     <div style="width: 70px; height: 70px; margin: 0 auto 14px auto; background: #1e293b; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #38bdf8;">
+      <img alt="OpenSea" src="assets/icons/custom/opensea.png" style="width: 44px; height: 44px;"/>
+     </div>
+     <!-- Animated Glowing LAUNCHING.... Word -->
+     <div class="animated-launching-text" style="font-size: 24px; margin-bottom: 14px;">
+      LAUNCHING....
+     </div>
+     <!-- Retro Progress Loader Bar -->
+     <div style="width: 80%; max-width: 340px; height: 16px; background: #1e293b; border: 1px solid #38bdf8; border-radius: 8px; margin: 0 auto 16px auto; overflow: hidden; position: relative;">
+      <div style="width: 65%; height: 100%; background: linear-gradient(90deg, #0284c7, #38bdf8); animation: bgShimmer 2s linear infinite;">
+      </div>
+     </div>
+     <p style="font-size: 12px; color: #94a3b8; max-width: 380px; margin: 0 auto 16px auto; line-height: 1.5;">
+      Our official OpenSea marketplace collection is currently being prepared alongside our artist collective. Complete the Whitelist Application for a FCFS spot.
+     </p>
+     <div style="display: flex; justify-content: center; gap: 10px;">
+      <button class="win-button btn-primary" onclick="window.OSWindowManager.openWindow('win-whitelist'); window.OSWindowManager.closeWindow('win-opensea');" style="background: #0284c7; color: #fff; padding: 6px 14px;">
+       Apply for Whitelist
+      </button>
+      <button class="win-button" onclick="window.OSWindowManager.closeWindow('win-opensea');" style="padding: 6px 14px;">
+       Close
+      </button>
+     </div>
+    </div>
+    <div class="window-statusbar" style="background: #060910; color: #94a3b8; border-color: #1e293b;">
+     <span>
+      Contract: Deploying to Ethereum
+     </span>
+     <span>
+      ERC-721 Collection
+     </span>
+    </div>
+   </div>
+   <!-- WINDOW 9: FAQ (Knowledge Base Accordion) -->
+   <div class="window hidden" data-icon="assets/icons/custom/faq.png" data-title="FAQ" id="win-faq" style="top: 95px; left: 240px; width: 600px;">
+    <div class="window-titlebar">
+     <div class="window-title">
+      <img alt="" class="window-title-icon" src="assets/icons/custom/faq.png"/>
+      <span>
+       FAQ - Hood Maxxers Frequently Asked Questions
+      </span>
+     </div>
+     <div class="window-controls">
+      <button class="window-btn btn-minimize">
+       _
+      </button>
+      <button class="window-btn btn-maximize">
+       🗖
+      </button>
+      <button class="window-btn btn-close">
+       ✕
+      </button>
+     </div>
+    </div>
+    <div class="window-menubar">
+     <span class="menu-item">
+      <u>
+       H
+      </u>
+      elp
+     </span>
+     <span class="menu-item">
+      <u>
+       S
+      </u>
+      upport
+     </span>
+    </div>
+    <div class="window-content" style="padding: 16px;">
+     <div class="faq-container">
+      <!-- FAQ 1 -->
+      <div class="faq-item open">
+       <div class="faq-question">
+        <span>
+         1. What is Hood Maxxers?
+        </span>
+        <span class="faq-arrow">
+         ▼
+        </span>
+       </div>
+       <div class="faq-answer">
+        Hood Maxxers is a web3 trading ecosystem and 4,444 handcrafted NFT collection featuring the MAXX League: an elite trading competition where NFT holders lock their characters, activate with $MAXXER, and compete with MAXX CASH for huge reward pools!
+       </div>
+      </div>
+      <!-- FAQ 2 -->
+      <div class="faq-item">
+       <div class="faq-question">
+        <span>
+         2. What is the $MAXXER token?
+        </span>
+        <span class="faq-arrow">
+         ▼
+        </span>
+       </div>
+       <div class="faq-answer">
+        $MAXXER is the core utility token powering the entire ecosystem. Its primary function:
+        <strong>
+         $MAXXER activates MAXXERS
+        </strong>
+        . Every activation requires 10,000 $MAXXER (50% funds the competition prize pool, and 50% is permanently burned).
+        <em>
+         NO $MAXXER, NO MAXX IN.
+        </em>
+       </div>
+      </div>
+      <!-- FAQ 3 -->
+      <div class="faq-item">
+       <div class="faq-question">
+        <span>
+         3. What is "MAXX IN"?
+        </span>
+        <span class="faq-arrow">
+         ▼
+        </span>
+       </div>
+       <div class="faq-answer">
+        MAXX IN is the locking mechanism where you lock your Hood Maxxer NFT and pay the 10,000 $MAXXER activation fee to receive virtual MAXX CASH trading capital based on its rarity. Your NFT remains locked safely in the vault for the duration of the competition.
+       </div>
+      </div>
+      <!-- FAQ 4 -->
+      <div class="faq-item">
+       <div class="faq-question">
+        <span>
+         4. What is MAXX CASH?
+        </span>
+        <span class="faq-arrow">
+         ▼
+        </span>
+       </div>
+       <div class="faq-answer">
+        MAXX CASH is the competitive in-game trading balance assigned to activated MAXXERS. It is used on the Dashboard to trade simulated stock tokens like $AAPL, $TSLA, $NVDA, $GOOG, $AMZN, and $MSFT to climb the leaderboard!
+       </div>
+      </div>
+      <!-- FAQ 5 -->
+      <div class="faq-item">
+       <div class="faq-question">
+        <span>
+         5. How does the MAXX League trading competition work?
+        </span>
+        <span class="faq-arrow">
+         ▼
+        </span>
+       </div>
+       <div class="faq-answer">
+        Traders execute buy and sell orders on stock token pairs. At the end of Season 1, the top 300 traders on the leaderboard win shares of the MAXX POOL prize fund and unlock exclusive rewards via MAXX OUT.
+       </div>
+      </div>
+      <!-- FAQ 6 -->
+      <div class="faq-item">
+       <div class="faq-question">
+        <span>
+         6. How do I get on the Whitelist?
+        </span>
+        <span class="faq-arrow">
+         ▼
+        </span>
+       </div>
+       <div class="faq-answer">
+        Open the
+        <strong>
+         Whitelist Application
+        </strong>
+        from your desktop or taskbar, complete the 5 community tasks (Follow on X, Like/Repost, Tag 3 Maxxers, Join Discord, and submit your wallet address), and submit your application.
+       </div>
+      </div>
+      <!-- FAQ 7 -->
+      <div class="faq-item">
+       <div class="faq-question">
+        <span>
+         7. When does the official launch take place?
+        </span>
+        <span class="faq-arrow">
+         ▼
+        </span>
+       </div>
+       <div class="faq-answer">
+        Our official first post and announcements go live this Monday! Keep an eye on our official X (@HoodMaxxers) and Discord channels for mint dates and competition kickoff times.
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="window-statusbar">
+     <span>
+      7 Topics Loaded
+     </span>
+     <span>
+      Version 1.0
+     </span>
+    </div>
+   </div>
+   <!-- START MENU (FLOATING RETRO MENU) -->
+   <div class="hidden" id="start-menu">
+    <div class="start-search-box">
+     <input class="start-search-input" id="start-search-input" placeholder="Search Hood Maxxers apps..." type="text"/>
+    </div>
+    <div class="start-pinned-section">
+     <div class="start-section-title">
+      Pinned Applications
+     </div>
+     <div class="start-apps-grid">
+      <div class="start-grid-item" data-url="https://hoodmaxxers.gitbook.io/hoodmaxxers-docs/">
+       <img alt="" src="assets/icons/custom/about_us.png"/>
+       <span>
+        About us
+       </span>
+      </div>
+      <div class="start-grid-item" data-window="win-whitelist">
+       <img alt="" src="assets/icons/custom/wl_application.png"/>
+       <span>
+        WL Application
+       </span>
+      </div>
+      <div class="start-grid-item" data-window="win-nft">
+       <img alt="" src="assets/icons/custom/maxxers_nft.png"/>
+       <span>
+        MAXXERS NFT
+       </span>
+      </div>
+      <div class="start-grid-item" data-window="win-token">
+       <img alt="" src="assets/icons/custom/maxxers_token.png"/>
+       <span>
+        $MAXXERS
+       </span>
+      </div>
+      <div class="start-grid-item" data-window="win-maxxin">
+       <img alt="" src="assets/icons/custom/maxx_in.png"/>
+       <span>
+        MAXX IN
+       </span>
+      </div>
+      <div class="start-grid-item" data-window="win-league">
+       <img alt="" src="assets/icons/custom/maxx_league.png"/>
+       <span>
+        MAXX LEAGUE
+       </span>
+      </div>
+      <div class="start-grid-item" data-window="win-dashboard">
+       <img alt="" src="assets/icons/custom/dashboard.png"/>
+       <span>
+        DASHBOARD
+       </span>
+      </div>
+      <div class="start-grid-item" data-window="win-maxxout">
+       <img alt="" src="assets/icons/custom/maxx_out.png"/>
+       <span>
+        MAXX OUT
+       </span>
+      </div>
+      <div class="start-grid-item" data-url="https://discord.gg/NNkqvwbwMb">
+       <img alt="" src="assets/icons/custom/discord.png"/>
+       <span>
+        Discord
+       </span>
+      </div>
+      <div class="start-grid-item" data-url="https://x.com/HoodMaxxers">
+       <img alt="" src="assets/icons/custom/x.png"/>
+       <span>
+        X
+       </span>
+      </div>
+      <div class="start-grid-item" data-window="win-opensea">
+       <img alt="" src="assets/icons/custom/opensea.png"/>
+       <span>
+        Opensea
+       </span>
+      </div>
+      <div class="start-grid-item" data-window="win-faq">
+       <img alt="" src="assets/icons/custom/faq.png"/>
+       <span>
+        FAQ
+       </span>
+      </div>
+     </div>
+    </div>
+    <div class="start-footer">
+     <div class="start-user-info">
+      <img alt="" class="start-user-avatar" src="assets/images/nft6_diamond_chad.svg"/>
+      <span class="start-user-name">
+       Hood Maxxer #001
+      </span>
+     </div>
+     <div style="display: flex; gap: 8px;">
+      <div class="start-power-btn start-action-item" data-action="wallpaper" title="Change Wallpaper">
+       🌄
+      </div>
+      <div class="start-power-btn start-action-item" data-action="shutdown" title="Shut Down (Prank)">
+       ⏻
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- RIGHT-CLICK CONTEXT MENU -->
+   <div id="context-menu">
+    <div class="context-item" data-action="refresh">
+     Refresh Desktop
+    </div>
+    <div class="context-divider">
+    </div>
+    <div class="context-item" data-action="wallpaper">
+     Next Wallpaper 🌄
+    </div>
+    <div class="context-divider">
+    </div>
+    <div class="context-item" data-action="win-dashboard">
+     Open DASHBOARD
+    </div>
+    <div class="context-item" data-action="win-whitelist">
+     Open Whitelist App
+    </div>
+    <div class="context-item" data-action="win-nft">
+     Open MAXXERS NFT
+    </div>
+    <div class="context-item" data-action="win-token">
+     Open $MAXXERS
+    </div>
+    <div class="context-item" data-action="win-maxxin">
+     Open MAXX IN
+    </div>
+    <div class="context-item" data-action="win-league">
+     Open MAXX LEAGUE
+    </div>
+    <div class="context-item" data-action="win-faq">
+     Open FAQ
+    </div>
+   </div>
+   <!-- BSOD PRANK SCREEN -->
+   <div class="hidden" id="bsod-screen">
+    <div class="bsod-title">
+     HOOD MAXXERS 11
+    </div>
+    <p style="margin-bottom: 16px;">
+     Your PC ran into a problem and needs to restart because someone didn't MAXX IN.
+     <br/>
+     Stop Code: SYSTEM_THREAD_DEGEN_EXCEPTION_NOT_HANDLED
+    </p>
+    <p style="margin-bottom: 24px;">
+     * Press any key or click anywhere to reboot Hood Maxxers PC.
+     <br/>
+     * Press CTRL+ALT+DEL to execute MAXX IN.
+     <br/>
+     * Paper hands will be permanently sent to the Recycle Bin.
+    </p>
+    <p style="color: #ffff55;">
+     Press any key to reboot _
+    </p>
+   </div>
+  </div>
+  <!-- End #desktop -->
+  <!-- ==========================================
+       WINDOWS PC TASKBAR (BOTTOM BAR)
+       With all 12 project applications!
+       ========================================== -->
+  <div id="taskbar">
+   <!-- Start Button -->
+   <div id="start-button" title="Start">
+    <img alt="Start" class="start-icon" src="assets/icons/windows11_start.svg"/>
+   </div>
+   <!-- Pinned & Running Apps Dock (Matching Desktop Icons) -->
+   <div id="taskbar-dock">
+    <!-- 1. About us -->
+    <div class="taskbar-app" data-tooltip="About us (GitBook Docs)" data-url="https://hoodmaxxers.gitbook.io/hoodmaxxers-docs/">
+     <img alt="About us" src="assets/icons/custom/about_us.png"/>
+     <span class="taskbar-app-label">
+      About us
+     </span>
+     <div class="app-indicator">
+     </div>
+    </div>
+    <!-- 2. Whitelist Application -->
+    <div class="taskbar-app" data-tooltip="Whitelist Application" data-window="win-whitelist">
+     <img alt="Whitelist Application" src="assets/icons/custom/wl_application.png"/>
+     <span class="taskbar-app-label">
+      WL Application
+     </span>
+     <div class="app-indicator">
+     </div>
+    </div>
+    <!-- 3. MAXXERS NFT -->
+    <div class="taskbar-app" data-tooltip="MAXXERS NFT Showcase" data-window="win-nft">
+     <img alt="MAXXERS NFT" src="assets/icons/custom/maxxers_nft.png"/>
+     <span class="taskbar-app-label">
+      MAXXERS NFT
+     </span>
+     <div class="app-indicator">
+     </div>
+    </div>
+    <!-- 4. $MAXXERS -->
+    <div class="taskbar-app" data-tooltip="$MAXXERS Token" data-window="win-token">
+     <img alt="$MAXXERS" src="assets/icons/custom/maxxers_token.png"/>
+     <span class="taskbar-app-label">
+      $MAXXERS
+     </span>
+     <div class="app-indicator">
+     </div>
+    </div>
+    <!-- 5. MAXX IN -->
+    <div class="taskbar-app" data-tooltip="MAXX IN Portal" data-window="win-maxxin">
+     <img alt="MAXX IN" src="assets/icons/custom/maxx_in.png"/>
+     <span class="taskbar-app-label">
+      MAXX IN
+     </span>
+     <div class="app-indicator">
+     </div>
+    </div>
+    <!-- 6. MAXX LEAGUE -->
+    <div class="taskbar-app" data-tooltip="MAXX LEAGUE Leaderboard" data-window="win-league">
+     <img alt="MAXX LEAGUE" src="assets/icons/custom/maxx_league.png"/>
+     <span class="taskbar-app-label">
+      MAXX LEAGUE
+     </span>
+     <div class="app-indicator">
+     </div>
+    </div>
+    <!-- 7. DASHBOARD -->
+    <div class="taskbar-app" data-tooltip="DASHBOARD - Trading Terminal" data-window="win-dashboard">
+     <img alt="DASHBOARD" src="assets/icons/custom/dashboard.png"/>
+     <span class="taskbar-app-label">
+      DASHBOARD
+     </span>
+     <div class="app-indicator">
+     </div>
+    </div>
+    <!-- 8. MAXX OUT -->
+    <div class="taskbar-app" data-tooltip="MAXX OUT Claim" data-window="win-maxxout">
+     <img alt="MAXX OUT" src="assets/icons/custom/maxx_out.png"/>
+     <span class="taskbar-app-label">
+      MAXX OUT
+     </span>
+     <div class="app-indicator">
+     </div>
+    </div>
+    <!-- 9. Discord -->
+    <div class="taskbar-app" data-tooltip="Discord Community" data-url="https://discord.gg/NNkqvwbwMb">
+     <img alt="Discord" src="assets/icons/custom/discord.png"/>
+     <span class="taskbar-app-label">
+      Discord
+     </span>
+     <div class="app-indicator">
+     </div>
+    </div>
+    <!-- 10. X -->
+    <div class="taskbar-app" data-tooltip="Official X (@HoodMaxxers)" data-url="https://x.com/HoodMaxxers">
+     <img alt="X" src="assets/icons/custom/x.png"/>
+     <span class="taskbar-app-label">
+      X
+     </span>
+     <div class="app-indicator">
+     </div>
+    </div>
+    <!-- 11. Opensea -->
+    <div class="taskbar-app" data-tooltip="OpenSea" data-window="win-opensea">
+     <img alt="Opensea" src="assets/icons/custom/opensea.png"/>
+     <span class="taskbar-app-label">
+      Opensea
+     </span>
+     <div class="app-indicator">
+     </div>
+    </div>
+    <!-- 12. FAQ -->
+    <div class="taskbar-app" data-tooltip="FAQ" data-window="win-faq">
+     <img alt="FAQ" src="assets/icons/custom/faq.png"/>
+     <span class="taskbar-app-label">
+      FAQ
+     </span>
+     <div class="app-indicator">
+     </div>
+    </div>
+   </div>
+   <!-- System Tray (Right Side) -->
+   <div id="system-tray">
+    <div class="tray-btn" title="Show hidden icons">
+     ▲
+    </div>
+    <div class="tray-btn" title="Internet: Connected">
+     📶
+    </div>
+    <div class="tray-btn" id="tray-audio" title="Sound: Enabled">
+     🔊
+    </div>
+    <!-- Live Clock & Date Box -->
+    <div class="tray-clock-box" title="Date &amp; Time">
+     <div id="system-time">
+      12:35 PM
+     </div>
+     <div id="system-date">
+      10/18/2026
+     </div>
+    </div>
+    <!-- Peek / Show Desktop Line -->
+    <div class="tray-peek" id="btn-peek-desktop" title="Show Desktop">
+    </div>
+   </div>
+  </div>
+  <!-- Application Scripts -->
+  <script src="js/os.js">
+  </script>
+  <script src="js/apps.js">
+  </script>
+ </body>
+</html>

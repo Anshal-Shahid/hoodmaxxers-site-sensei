@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <circle cx="16" cy="16" r="14" fill="#f59e0b" stroke="#b45309" stroke-width="1.5"/>
+  <circle cx="16" cy="16" r="11" fill="#fbbf24"/>
+  <!-- Lightning Bolt -->
+  <polygon points="18,4 8,17 15,17 13,28 24,14 17,14" fill="#dc2626" stroke="#991b1b" stroke-width="1"/>
+</svg>

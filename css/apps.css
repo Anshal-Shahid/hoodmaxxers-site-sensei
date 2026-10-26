@@ -1,0 +1,1809 @@
+/* ==========================================================================
+   WINDOW APPS STYLESHEET
+   Unique styling for each interactive application window
+   ========================================================================== */
+
+/* ----------------------------------------------------
+   1. HOME WINDOW (Exact match to user's reference mockup)
+   ---------------------------------------------------- */
+.app-home {
+  padding: 24px 20px 20px 20px;
+}
+
+.home-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.home-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.home-pixel-title {
+  font-family: 'Press Start 2P', 'Courier New', monospace;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #000000;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+
+.home-description {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #222222;
+  font-family: 'MS Sans Serif', 'Tahoma', sans-serif;
+  max-width: 100%;
+}
+
+.home-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.btn-banned {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px 14px;
+  background-color: #c0c0c0;
+}
+
+.btn-mint-cta {
+  background-color: #000080;
+  color: #ffffff;
+  font-weight: bold;
+  border-top-color: #5599ff;
+  border-left-color: #5599ff;
+}
+
+.btn-mint-cta:hover {
+  background-color: #1084d0;
+}
+
+.home-right {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-character-wrapper {
+  background: transparent;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-character-img {
+  width: 170px;
+  height: auto;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  filter: drop-shadow(2px 3px 0px rgba(0, 0, 0, 0.15));
+}
+
+.character-tag {
+  font-size: 10px;
+  font-weight: bold;
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border: 1px solid #808080;
+  color: #660000;
+}
+
+/* Home Quick Stats Strip */
+.home-ticker {
+  margin-top: 20px;
+  padding: 8px 12px;
+  background: #f4f4f4;
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 12px;
+  text-align: center;
+}
+
+.ticker-item .ticker-label {
+  font-size: 10px;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.ticker-item .ticker-val {
+  font-size: 13px;
+  font-weight: bold;
+  color: #000080;
+  font-family: 'Courier New', monospace;
+}
+
+/* ----------------------------------------------------
+   2. ABOUT US & LORE WINDOW
+   ---------------------------------------------------- */
+.about-hero {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  background: #f9f9f9;
+  padding: 12px;
+  border: 1px solid #808080;
+}
+
+.about-avatar {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #000;
+  image-rendering: pixelated;
+}
+
+.about-text h3 {
+  font-size: 14px;
+  color: #000080;
+  margin-bottom: 6px;
+}
+
+.about-tabs-container {
+  margin-top: 14px;
+}
+
+.retro-tabs {
+  display: flex;
+  gap: 2px;
+  border-bottom: 2px solid #808080;
+}
+
+.retro-tab {
+  padding: 4px 12px;
+  background: #c0c0c0;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #808080;
+  border-bottom: none;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.retro-tab.active {
+  background: #ffffff;
+  border-bottom: 2px solid #ffffff;
+  margin-bottom: -2px;
+  font-weight: bold;
+}
+
+.retro-tab-pane {
+  display: none;
+  padding: 12px;
+  border: 1px solid #808080;
+  border-top: none;
+  background: #ffffff;
+}
+
+.retro-tab-pane.active {
+  display: block;
+}
+
+/* Roadmap items */
+.roadmap-phase {
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed #c0c0c0;
+}
+
+.phase-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #000080;
+  margin-bottom: 4px;
+}
+
+.phase-status {
+  padding: 1px 6px;
+  font-size: 10px;
+  border-radius: 2px;
+}
+
+.phase-status.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.phase-status.active {
+  background: #cce5ff;
+  color: #004085;
+}
+
+/* ----------------------------------------------------
+   3. NFT GALLERY & MINT STATION
+   ---------------------------------------------------- */
+.mint-hero-banner {
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+  color: #ffffff;
+  padding: 16px;
+  border: 2px solid #000000;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.mint-headline h2 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  color: #ffd700;
+  margin-bottom: 6px;
+}
+
+.mint-headline p {
+  font-size: 11px;
+  color: #e0e7ff;
+}
+
+.mint-interactive-box {
+  background: #ffffff;
+  color: #000000;
+  padding: 10px 14px;
+  border: 2px solid #808080;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 220px;
+}
+
+.mint-progress-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.mint-counter-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.retro-progress-bar {
+  width: 100%;
+  height: 16px;
+  background: #e0e0e0;
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    #000080,
+    #000080 10px,
+    #1084d0 10px,
+    #1084d0 20px
+  );
+  width: 42%;
+  transition: width 0.4s ease;
+}
+
+.mint-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.mint-qty-selector {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.qty-btn {
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  font-weight: bold;
+}
+
+.qty-display {
+  width: 32px;
+  height: 22px;
+  text-align: center;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  background: #ffffff;
+  border: 1px solid #808080;
+  line-height: 20px;
+}
+
+.btn-mint-execute {
+  background: #28a745;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 6px 14px;
+  border-top-color: #71dd8a;
+  border-left-color: #71dd8a;
+}
+
+/* NFT Grid Gallery */
+.gallery-filters {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.filter-btn {
+  padding: 3px 8px;
+  font-size: 11px;
+}
+
+.filter-btn.active {
+  background: #000080;
+  color: #ffffff;
+}
+
+.nft-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 12px;
+}
+
+.nft-card {
+  background: #f8f9fa;
+  border: 2px solid #808080;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.1s, border-color 0.1s;
+}
+
+.nft-card:hover {
+  border-color: #000080;
+  background: #eef2ff;
+  transform: translateY(-2px);
+}
+
+.nft-thumbnail {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: #111;
+  border: 1px solid #000;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.nft-card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nft-card-name {
+  font-weight: bold;
+  font-size: 10.5px;
+}
+
+.nft-badge {
+  font-size: 9px;
+  padding: 1px 4px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+.badge-legendary { background: #ffd700; color: #5c4305; }
+.badge-rare { background: #c084fc; color: #3b0764; }
+.badge-common { background: #94a3b8; color: #0f172a; }
+
+/* ----------------------------------------------------
+   4. HOW TO BUY WINDOW
+   ---------------------------------------------------- */
+.contract-box {
+  background: #fff8db;
+  border: 2px solid #f59f00;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.ca-address-label {
+  font-size: 10px;
+  font-weight: bold;
+  color: #e67700;
+  text-transform: uppercase;
+}
+
+.ca-address-code {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000000;
+  word-break: break-all;
+}
+
+.buy-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.buy-step-card {
+  display: flex;
+  gap: 12px;
+  background: #fdfdfd;
+  padding: 10px;
+  border: 1px solid #c0c0c0;
+  align-items: flex-start;
+}
+
+.step-number {
+  width: 28px;
+  height: 28px;
+  background: #000080;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  flex-shrink: 0;
+  border: 1px solid #000;
+}
+
+.step-details h4 {
+  font-size: 12px;
+  color: #000080;
+  margin-bottom: 3px;
+}
+
+.step-details p {
+  font-size: 11px;
+  color: #444;
+}
+
+/* ----------------------------------------------------
+   5. TOKENOMICS WINDOW
+   ---------------------------------------------------- */
+.tokenomics-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.stat-box {
+  background: #f5f5f5;
+  border: 2px solid #808080;
+  padding: 10px;
+  text-align: center;
+}
+
+.stat-box .stat-label {
+  font-size: 10px;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.stat-box .stat-val {
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000080;
+  margin-top: 4px;
+}
+
+.pie-chart-section {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 14px;
+  background: #fbfbfb;
+  border: 1px solid #808080;
+  margin-bottom: 14px;
+}
+
+.pie-visual {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #22aa55 0% 80%,
+    #ffd700 80% 90%,
+    #0088ff 90% 95%,
+    #e03131 95% 100%
+  );
+  border: 2px solid #333;
+  flex-shrink: 0;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.pie-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 11px;
+}
+
+.legend-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-color {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #000;
+  flex-shrink: 0;
+}
+
+.security-checklist {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px;
+}
+
+.security-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #155724;
+  background: #e8f5e9;
+  padding: 6px 8px;
+  border: 1px solid #81c784;
+}
+
+/* ----------------------------------------------------
+   6. CHAT / MSN MESSENGER 98
+   ---------------------------------------------------- */
+.chat-window-layout {
+  display: flex;
+  gap: 8px;
+  height: 320px;
+}
+
+.chat-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.chat-log {
+  flex: 1;
+  background: #ffffff;
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  padding: 8px;
+  overflow-y: auto;
+  font-size: 11.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: var(--font-retro);
+}
+
+.chat-message {
+  line-height: 1.35;
+}
+
+.chat-time {
+  color: #888888;
+  font-size: 10px;
+  margin-right: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+.chat-sender {
+  font-weight: bold;
+  color: #000080;
+  margin-right: 4px;
+}
+
+.chat-sender.admin {
+  color: #c00000;
+}
+
+.chat-sender.me {
+  color: #008000;
+}
+
+.chat-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 4px 6px;
+  font-family: var(--font-retro);
+  font-size: 11px;
+  border: 1px solid #808080;
+}
+
+.chat-sidebar {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  background: #f9f9f9;
+  padding: 6px;
+}
+
+.chat-user-header {
+  font-weight: bold;
+  font-size: 10px;
+  border-bottom: 1px solid #c0c0c0;
+  padding-bottom: 4px;
+  margin-bottom: 6px;
+}
+
+.chat-users-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 10.5px;
+}
+
+.chat-user-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.online-dot {
+  width: 6px;
+  height: 6px;
+  background: #28a745;
+  border-radius: 50%;
+}
+
+/* ----------------------------------------------------
+   7. FAQ WINDOW
+   ---------------------------------------------------- */
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.faq-item {
+  border: 1px solid #808080;
+  background: #fdfdfd;
+}
+
+.faq-question {
+  padding: 8px 12px;
+  background: #e9e9e9;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question:hover {
+  background: #000080;
+  color: #ffffff;
+}
+
+.faq-answer {
+  padding: 10px 12px;
+  font-size: 11.5px;
+  line-height: 1.45;
+  border-top: 1px solid #c0c0c0;
+  background: #ffffff;
+  display: none;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+/* ----------------------------------------------------
+   8. WINAMP MUSIC PLAYER
+   ---------------------------------------------------- */
+.winamp-player {
+  background: #232323;
+  color: #00ff00;
+  padding: 10px;
+  border: 2px solid #444;
+  font-family: 'Courier New', monospace;
+}
+
+.winamp-lcd {
+  background: #001100;
+  border: 2px solid #003300;
+  padding: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.winamp-track-name {
+  color: #00ff00;
+  font-size: 12px;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.winamp-time {
+  color: #00ff00;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Visualizer Bars */
+.winamp-visualizer {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 36px;
+  padding: 2px;
+  background: #000000;
+  border: 1px solid #222;
+  margin-bottom: 10px;
+}
+
+.viz-bar {
+  flex: 1;
+  background: linear-gradient(0deg, #00ff00 0%, #ffff00 70%, #ff0000 100%);
+  height: 20%;
+  transition: height 0.15s ease;
+}
+
+.winamp-transport {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+}
+
+.winamp-btn {
+  background: #333333;
+  color: #ffffff;
+  border: 1px solid #777;
+  padding: 4px 10px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.winamp-btn:hover {
+  background: #555;
+}
+
+/* ----------------------------------------------------
+   9. MINESWEEPER / DUMROSE CLICKER
+   ---------------------------------------------------- */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+}
+
+.game-score-board {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 280px;
+  background: #000000;
+  padding: 6px 12px;
+  border: 2px inset #808080;
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.game-click-target {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: #ffd700;
+  border: 6px outset #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.05s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.game-click-target:active {
+  transform: scale(0.92);
+  border-style: inset;
+}
+
+.game-click-target img {
+  width: 80px;
+  height: 80px;
+  pointer-events: none;
+}
+
+.game-hint {
+  font-size: 11px;
+  color: #666;
+}
+
+/* ----------------------------------------------------
+   10. RECYCLE BIN WINDOW
+   ---------------------------------------------------- */
+.trash-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+
+.trash-file {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 6px;
+  border: 1px dotted transparent;
+  cursor: pointer;
+}
+
+.trash-file:hover {
+  border-color: #000080;
+  background: #eef2ff;
+}
+
+.trash-file img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 4px;
+}
+
+.trash-file span {
+  font-size: 10.5px;
+  word-break: break-all;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .home-layout {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .home-right {
+    width: 100%;
+  }
+  .tokenomics-summary-grid {
+    grid-template-columns: 1fr;
+  }
+  .chat-window-layout {
+    flex-direction: column;
+    height: 400px;
+  }
+  .chat-sidebar {
+    width: 100%;
+    height: 90px;
+  }
+}
+
+/* ----------------------------------------------------
+   11. ALLOWLIST APPLICATION WINDOW
+   ---------------------------------------------------- */
+.allowlist-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.allowlist-header-banner {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  padding: 14px 16px;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.allowlist-badge {
+  background: #10b981;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.allowlist-spots {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  font-weight: bold;
+  background: rgba(0,0,0,0.3);
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-label {
+  font-size: 11px;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+.form-input {
+  padding: 6px 8px;
+  font-family: var(--font-retro);
+  font-size: 11px;
+  border: 2px inset #808080;
+  background: #ffffff;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: #0078d4;
+  background: #f0f7ff;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.allowlist-pass-card {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border: 2px solid #d97706;
+  border-radius: 6px;
+  padding: 16px;
+  text-align: center;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.2);
+}
+
+/* ----------------------------------------------------
+   12. MAXX IN PORTAL WINDOW
+   ---------------------------------------------------- */
+.maxxin-hero {
+  background: linear-gradient(135deg, #450a0a 0%, #7f1d1d 50%, #991b1b 100%);
+  color: #ffffff;
+  padding: 16px;
+  border: 2px solid #000;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.maxxin-hero h2 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 15px;
+  color: #facc15;
+  text-shadow: 2px 2px 0px #000;
+  margin-bottom: 6px;
+}
+
+.maxxin-chips-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.chip-btn {
+  padding: 8px 4px;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.chip-btn.active {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.maxxin-calc-box {
+  background: #18181b;
+  color: #4ade80;
+  padding: 12px;
+  border: 2px inset #52525b;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.btn-execute-maxxin {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(180deg, #dc2626 0%, #991b1b 100%);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  border-top-color: #f87171;
+  border-left-color: #f87171;
+}
+
+.btn-execute-maxxin:hover {
+  filter: brightness(1.15);
+}
+
+/* Staking sub-card */
+.staking-sub-card {
+  background: #f8fafc;
+  border: 2px solid #cbd5e1;
+  padding: 12px;
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ----------------------------------------------------
+   13. DISCORD CLIENT WINDOW
+   ---------------------------------------------------- */
+.discord-layout {
+  display: flex;
+  height: 380px;
+  background: #313338;
+  color: #dbdee1;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: -14px;
+}
+
+.discord-server-col {
+  width: 48px;
+  background: #1e1f22;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.discord-server-icon {
+  width: 36px;
+  height: 36px;
+  background: #5865f2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: border-radius 0.15s;
+}
+
+.discord-server-icon:hover {
+  border-radius: 12px;
+}
+
+.discord-channels-col {
+  width: 150px;
+  background: #2b2d31;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 8px;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.discord-channel-header {
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #1f2023;
+  margin-bottom: 6px;
+}
+
+.discord-channel-item {
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 11.5px;
+  color: #949ba4;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.discord-channel-item:hover {
+  background: rgba(255,255,255,0.06);
+  color: #dbdee1;
+}
+
+.discord-channel-item.active {
+  background: rgba(255,255,255,0.1);
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.discord-chat-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #313338;
+}
+
+.discord-chat-messages {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.discord-msg-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.discord-msg-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.discord-msg-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.discord-msg-user {
+  font-weight: 600;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.discord-msg-user .discord-msg-time {
+  font-size: 10px;
+  font-weight: normal;
+  color: #949ba4;
+  margin-left: 6px;
+}
+
+.discord-msg-text {
+  font-size: 12px;
+  color: #dbdee1;
+  line-height: 1.35;
+}
+
+.discord-input-box {
+  padding: 8px 12px;
+  background: #313338;
+}
+
+.discord-input-field {
+  width: 100%;
+  padding: 8px 12px;
+  background: #383a40;
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 12px;
+  outline: none;
+}
+
+/* ----------------------------------------------------
+   14. GOOGLE CHROME BROWSER WINDOW
+   ---------------------------------------------------- */
+.chrome-browser-ui {
+  display: flex;
+  flex-direction: column;
+  margin: -14px;
+}
+
+.chrome-tabs-bar {
+  display: flex;
+  background: #dee1e6;
+  padding: 6px 8px 0 8px;
+  gap: 4px;
+  border-bottom: 1px solid #c1c5cb;
+}
+
+.chrome-tab-item {
+  padding: 6px 14px;
+  background: #cdd2d9;
+  border-radius: 6px 6px 0 0;
+  font-size: 11px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.chrome-tab-item.active {
+  background: #ffffff;
+  font-weight: 500;
+}
+
+.chrome-nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  padding: 6px 10px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.chrome-omnibox {
+  flex: 1;
+  background: #f1f3f4;
+  border: 1px solid #dadce0;
+  border-radius: 16px;
+  padding: 4px 12px;
+  font-size: 11px;
+  color: #3c4043;
+}
+
+.chrome-page-content {
+  padding: 16px;
+  background: #f8fafc;
+  min-height: 280px;
+}
+
+/* ----------------------------------------------------
+   15. STEAM GAMES LAUNCHER
+   ---------------------------------------------------- */
+.steam-ui {
+  background: #171a21;
+  color: #c6d4df;
+  margin: -14px;
+  display: flex;
+  height: 360px;
+}
+
+.steam-library-sidebar {
+  width: 160px;
+  background: #1e232d;
+  padding: 10px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-right: 1px solid #2a475e;
+}
+
+.steam-game-item {
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.steam-game-item:hover, .steam-game-item.active {
+  background: #2a475e;
+  color: #ffffff;
+}
+
+.steam-main-panel {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ==========================================================================
+   HOOD MAXXERS ECOSYSTEM APPLICATIONS
+   Whitelist, MAXXERS NFT, $MAXXERS, MAXX IN, MAXX LEAGUE, DASHBOARD, MAXX OUT, OPENSEA
+   ========================================================================== */
+
+/* --- Animated Launching Banner & Text --- */
+@keyframes launchingGlow {
+  0% {
+    text-shadow: 0 0 6px #facc15, 0 0 12px #eab308;
+    transform: scale(0.99);
+  }
+  50% {
+    text-shadow: 0 0 16px #fde047, 0 0 28px #facc15, 0 0 45px #ca8a04;
+    transform: scale(1.02);
+  }
+  100% {
+    text-shadow: 0 0 6px #facc15, 0 0 12px #eab308;
+    transform: scale(0.99);
+  }
+}
+
+@keyframes pulseBorder {
+  0%, 100% {
+    border-color: #facc15;
+    box-shadow: 0 0 10px rgba(250, 204, 21, 0.4);
+  }
+  50% {
+    border-color: #ca8a04;
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.8);
+  }
+}
+
+.animated-launching-text {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 26px;
+  color: #facc15;
+  animation: launchingGlow 1.8s infinite ease-in-out;
+  letter-spacing: 2px;
+  text-align: center;
+  display: inline-block;
+}
+
+.launching-banner-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+  border: 2px solid #facc15;
+  border-radius: 6px;
+  animation: pulseBorder 2s infinite ease-in-out;
+  color: #fef08a;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/* --- Tokenomics Soon Highlight Banner --- */
+.badge-tokenomics-soon {
+  background: linear-gradient(90deg, #b45309, #d97706, #f59e0b, #b45309);
+  background-size: 200% auto;
+  color: #ffffff;
+  padding: 10px 18px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  border: 2px solid #fef08a;
+  border-radius: 4px;
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.6);
+  animation: bgShimmer 3s linear infinite;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+@keyframes bgShimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* --- Whitelist Tasks UI --- */
+.wl-tasks-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.wl-task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  gap: 10px;
+}
+
+.wl-task-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.wl-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #10b981;
+  cursor: pointer;
+}
+
+.wl-task-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.wl-task-desc {
+  font-size: 11px;
+  color: #64748b;
+}
+
+/* --- MAXXERS NFT Showcase --- */
+.nft-showcase-layout {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 14px;
+}
+
+.nft-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 10px;
+  max-height: 380px;
+  overflow-y: auto;
+  padding: 4px;
+}
+
+.nft-card-item {
+  background: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.nft-card-item:hover, .nft-card-item.active {
+  border-color: #3b82f6;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+  transform: translateY(-2px);
+}
+
+.nft-card-thumb {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  background: #f1f5f9;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.nft-trait-panel {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 11px;
+}
+
+.trait-pill {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 8px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+}
+
+/* --- DASHBOARD TRADING TERMINAL --- */
+.dashboard-terminal-container {
+  display: flex;
+  flex-direction: column;
+  background: #0b0f19;
+  color: #e2e8f0;
+  margin: -14px;
+  height: 480px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.dash-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #111827;
+  padding: 8px 14px;
+  border-bottom: 1px solid #1f2937;
+  font-size: 12px;
+}
+
+.dash-status-unknown {
+  background: #374151;
+  color: #9ca3af;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.dash-balance-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #1f2937;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid #374151;
+}
+
+.dash-main-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr 220px;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Stock token pair selector list */
+.dash-stock-list {
+  background: #0f172a;
+  border-right: 1px solid #1f2937;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.dash-stock-item {
+  padding: 10px 12px;
+  border-bottom: 1px solid #1e293b;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.15s;
+}
+
+.dash-stock-item:hover {
+  background: #1e293b;
+}
+
+.dash-stock-item.active {
+  background: #1e293b;
+  border-left: 3px solid #3b82f6;
+}
+
+.dash-stock-sym {
+  font-weight: bold;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+.dash-stock-name {
+  font-size: 10px;
+  color: #94a3b8;
+}
+
+.dash-stock-price {
+  font-size: 12px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.price-up {
+  color: #4ade80 !important;
+}
+
+.price-down {
+  color: #f87171 !important;
+}
+
+/* Center chart panel */
+.dash-chart-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  background: #090d16;
+  border-right: 1px solid #1f2937;
+}
+
+.chart-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#trading-chart-canvas {
+  width: 100%;
+  height: 220px;
+  background: #060910;
+  border: 1px solid #1f2937;
+  border-radius: 4px;
+}
+
+/* Order execution ticket */
+.dash-order-panel {
+  background: #0f172a;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-type-tabs {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-order-buy {
+  flex: 1;
+  background: #15803d;
+  color: #ffffff;
+  padding: 6px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-order-sell {
+  flex: 1;
+  background: #b91c1c;
+  color: #ffffff;
+  padding: 6px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Bottom portfolio & activities tabs */
+.dash-bottom-tabs {
+  background: #111827;
+  border-top: 1px solid #1f2937;
+  padding: 8px 12px;
+  display: flex;
+  gap: 16px;
+  font-size: 11px;
+}
+
+/* --- MAXX LEAGUE Leaderboard Table --- */
+.league-table-wrap {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11.5px;
+  margin-top: 10px;
+}
+
+.league-table-wrap th {
+  background: #1e293b;
+  color: #94a3b8;
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid #334155;
+}
+
+.league-table-wrap td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.league-empty-banner {
+  text-align: center;
+  padding: 30px 16px;
+  background: #f8fafc;
+  border: 2px dashed #cbd5e1;
+  border-radius: 6px;
+  margin: 16px 0;
+}
+
+/* --- Pop-up Alert Modals --- */
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  backdrop-filter: blur(2px);
+}
+
+.modal-dialog-box {
+  background: #f0f0f0;
+  border: 2px solid #ffffff;
+  border-right-color: #404040;
+  border-bottom-color: #404040;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 440px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Client revisions: classic PC application panels. */
+#win-whitelist, #win-nft, #win-maxxin { max-height: calc(100dvh - 115px); max-width: calc(100vw - 32px); }
+#win-whitelist .window-content, #win-nft .window-content, #win-maxxin .window-content { min-height: 0; }
+#win-whitelist .wl-task-item { border-radius: 0; background: #eee; border-color: #808080; }
+#win-whitelist .wl-task-left, #win-whitelist .wl-task-left > div { min-width: 0; }
+#win-whitelist input[type="text"] { border-radius: 0 !important; background: #fff; }
+.wl-feedback { margin-top: 12px; font-size: 12px; line-height: 1.5; }
+.wl-feedback:empty { display: none; }
+#btn-submit-whitelist { margin-left: auto; }
+#win-nft .nft-content { padding: 12px; background: #c0c0c0; }
+.retro-section-heading { padding: 10px 12px; border: 2px inset #eee; background: #fff; margin-bottom: 12px; }
+.retro-section-heading h3 { font-size: 14px; margin-bottom: 5px; }
+.retro-section-heading p { font-size: 12px; }
+#win-nft .nft-showcase-layout { display: block; }
+#win-nft .nft-cards-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); max-height: none; overflow: visible; gap: 12px; padding: 0; }
+#win-nft .nft-card-item { font: inherit; color: #000; border: 2px outset #eee; border-radius: 0; padding: 5px; gap: 5px; background: #c0c0c0; min-width: 0; box-shadow: none; transform: none; }
+#win-nft .nft-card-item.active { background: #000080; color: white; border-style: inset; }
+#win-nft .nft-card-item:hover { outline: 1px dotted #000; outline-offset: -4px; }
+#win-nft .nft-card-item:focus-visible { outline: 2px solid #000; outline-offset: 2px; }
+#win-nft .nft-card-thumb { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; border-radius: 0; background: #eee; margin: 0; }
+#win-nft .nft-card-item strong { font-size: 12px; }
+#win-nft .nft-card-item span { font-size: 10px; padding-bottom: 3px; }
+#win-nft .nft-trait-panel { margin-top: 12px; background: #fff; color: #000; border: 2px inset #eee; border-radius: 0; gap: 6px; padding: 12px; }
+#win-nft .nft-trait-panel h4 { font-size: 12px; border-bottom: 1px solid #808080; padding-bottom: 6px; }
+#win-nft .nft-trait-panel p { font-family: monospace; font-weight: bold; font-size: 14px; }
+#win-maxxin .maxxin-guide { background: #c0c0c0; padding: 16px; }
+.maxxin-heading { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.maxxin-heading img { width: 52px; height: 52px; object-fit: contain; }
+.maxxin-heading h2 { font-size: 22px; margin-bottom: 3px; }
+.retro-locked-label { font: bold 11px monospace; }
+.retro-notice { border: 2px inset #eee; padding: 12px; background: #fff; line-height: 1.6; }
+.guide-intro { margin: 16px 0 10px; }
+.maxxin-steps { list-style: none; counter-reset: steps; display: grid; gap: 8px; }
+.maxxin-steps li { counter-increment: steps; position: relative; padding: 12px 12px 12px 48px; background: #eee; border: 2px outset white; }
+.maxxin-steps li::before { content: counter(steps, decimal-leading-zero); position: absolute; left: 10px; top: 12px; font: bold 18px monospace; color: #000080; }
+.maxxin-steps li strong { font-size: 12px; }
+.maxxin-steps li p { margin-top: 4px; line-height: 1.5; }
+.maxxin-important { margin-top: 14px; background: #ffffdf; }
+.maxxin-cycle { padding: 14px 0; font: 11px/1.8 monospace; }
+.maxxin-actions { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 10px; }
+.win-button:disabled { cursor: not-allowed; opacity: .65; }
+.retro-coming-soon.window { min-height: 0; min-width: 280px; max-width: calc(100vw - 24px); }
+.retro-coming-soon .window-content { padding: 22px 18px 14px; background: #c0c0c0; border: 0; box-shadow: none; }
+.retro-message { display: flex; align-items: center; gap: 20px; }
+.retro-message h3 { font-size: 14px; margin-bottom: 8px; }
+.retro-message p { line-height: 1.5; }
+.retro-error-icon { display: grid; place-items: center; flex: 0 0 42px; height: 42px; background: #ffff00; border: 2px solid #000; color: black; font: bold 30px Georgia, serif; }
+.retro-dialog-actions { display: flex; justify-content: flex-end; margin-top: 24px; }
+.retro-dialog-actions .win-button { min-width: 80px; }
+@media (max-width: 600px) {
+  #win-nft .nft-cards-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  #win-whitelist .wl-task-item { flex-wrap: wrap; gap: 10px; }
+  #win-whitelist .wl-task-item > a { margin-left: 32px; }
+  #win-whitelist .window-content, #win-maxxin .maxxin-guide { padding: 10px !important; }
+  #win-nft .window-statusbar, #win-maxxin .window-statusbar { flex-wrap: wrap; gap: 4px; }
+}

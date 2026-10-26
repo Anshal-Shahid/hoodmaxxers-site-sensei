@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <circle cx="16" cy="16" r="13" fill="#0088cc" stroke="#004466" stroke-width="1.5"/>
+  <!-- Globe latitude / longitude lines -->
+  <ellipse cx="16" cy="16" rx="7" ry="13" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+  <line x1="3" y1="16" x2="29" y2="16" stroke="#ffffff" stroke-width="1.5"/>
+  <line x1="5" y1="10" x2="27" y2="10" stroke="#ffffff" stroke-width="1" opacity="0.8"/>
+  <line x1="5" y1="22" x2="27" y2="22" stroke="#ffffff" stroke-width="1" opacity="0.8"/>
+  <ellipse cx="16" cy="16" rx="15" ry="4" fill="none" stroke="#ffd700" stroke-width="1.5" transform="rotate(-25 16 16)"/>
+</svg>

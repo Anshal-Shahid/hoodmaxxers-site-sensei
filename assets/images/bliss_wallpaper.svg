@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
+  <defs>
+    <!-- Sky Gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1863be"/>
+      <stop offset="40%" stop-color="#428bde"/>
+      <stop offset="70%" stop-color="#79b7ee"/>
+      <stop offset="100%" stop-color="#b8dcfa"/>
+    </linearGradient>
+
+    <!-- Cloud Gradients -->
+    <radialGradient id="cloudGrad1" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="75%" stop-color="#eaf4ff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#d0e6fb" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="cloudGrad2" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="65%" stop-color="#e2f0fc" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#c2e0fa" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Hill Gradients -->
+    <linearGradient id="hillBack" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5fa835"/>
+      <stop offset="50%" stop-color="#4d9127"/>
+      <stop offset="100%" stop-color="#3b761b"/>
+    </linearGradient>
+
+    <linearGradient id="hillMid" x1="0%" y1="30%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#81d139"/>
+      <stop offset="40%" stop-color="#62b024"/>
+      <stop offset="80%" stop-color="#478c18"/>
+      <stop offset="100%" stop-color="#30650e"/>
+    </linearGradient>
+
+    <linearGradient id="hillFront" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#7ecc32"/>
+      <stop offset="30%" stop-color="#5fae22"/>
+      <stop offset="70%" stop-color="#428815"/>
+      <stop offset="100%" stop-color="#2e640d"/>
+    </linearGradient>
+
+    <linearGradient id="hillSunHighlight" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#a2ec52" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#7ecc32" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#30650e" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1920" height="1080" fill="url(#skyGrad)"/>
+
+  <!-- Clouds -->
+  <!-- Cloud 1 Left -->
+  <g opacity="0.92" transform="translate(-80, 40)">
+    <ellipse cx="320" cy="220" rx="190" ry="70" fill="url(#cloudGrad1)"/>
+    <ellipse cx="390" cy="180" rx="140" ry="80" fill="url(#cloudGrad1)"/>
+    <ellipse cx="250" cy="210" rx="130" ry="60" fill="url(#cloudGrad1)"/>
+    <ellipse cx="480" cy="230" rx="110" ry="50" fill="url(#cloudGrad1)"/>
+  </g>
+
+  <!-- Cloud 2 Center High -->
+  <g opacity="0.85" transform="translate(550, 20)">
+    <ellipse cx="350" cy="160" rx="240" ry="80" fill="url(#cloudGrad2)"/>
+    <ellipse cx="440" cy="120" rx="170" ry="90" fill="url(#cloudGrad1)"/>
+    <ellipse cx="260" cy="150" rx="150" ry="70" fill="url(#cloudGrad2)"/>
+    <ellipse cx="550" cy="170" rx="130" ry="60" fill="url(#cloudGrad2)"/>
+    <ellipse cx="180" cy="180" rx="100" ry="45" fill="url(#cloudGrad2)"/>
+  </g>
+
+  <!-- Cloud 3 Right Wisps -->
+  <g opacity="0.88" transform="translate(1180, 80)">
+    <ellipse cx="400" cy="200" rx="260" ry="75" fill="url(#cloudGrad1)"/>
+    <ellipse cx="480" cy="160" rx="180" ry="85" fill="url(#cloudGrad1)"/>
+    <ellipse cx="300" cy="190" rx="160" ry="65" fill="url(#cloudGrad2)"/>
+    <ellipse cx="620" cy="220" rx="140" ry="55" fill="url(#cloudGrad2)"/>
+  </g>
+
+  <!-- Distant Blue Ridge / Horizon mist -->
+  <path d="M 0 680 Q 480 620 960 650 T 1920 620 L 1920 1080 L 0 1080 Z" fill="#6da35e" opacity="0.4"/>
+
+  <!-- Background Hills -->
+  <path d="M 0 650 Q 320 540 760 620 T 1600 580 Q 1780 610 1920 630 L 1920 1080 L 0 1080 Z" fill="url(#hillBack)"/>
+
+  <!-- Middle Rolling Hill -->
+  <path d="M 0 680 Q 380 570 820 620 Q 1200 660 1620 550 Q 1800 590 1920 620 L 1920 1080 L 0 1080 Z" fill="url(#hillMid)"/>
+
+  <!-- Foreground Main Sweeping Green Hill (The iconic Bliss curve) -->
+  <path d="M -50 710 Q 350 560 880 570 Q 1340 580 1950 740 L 1950 1080 L -50 1080 Z" fill="url(#hillFront)"/>
+
+  <!-- Front Sunlit Crest Highlight -->
+  <path d="M -50 710 Q 350 560 880 570 Q 1340 580 1950 740 Q 1380 640 880 610 Q 350 610 -50 740 Z" fill="url(#hillSunHighlight)"/>
+
+  <!-- Front Foreground Hill Sweep from Right -->
+  <path d="M 650 1080 Q 1150 680 1950 720 L 1950 1080 Z" fill="#397914" opacity="0.75"/>
+  <path d="M 650 1080 Q 1150 680 1950 720 Q 1450 760 900 1080 Z" fill="url(#hillSunHighlight)"/>
+</svg>

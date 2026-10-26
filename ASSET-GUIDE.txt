@@ -1,0 +1,43 @@
+ASSET SETUP — NO CODE CHANGES REQUIRED
+
+1. NFT ARTWORK
+Folder: assets/images/nfts/
+Filenames: nft-01.png, nft-02.png, nft-03.png, nft-04.png,
+           nft-05.png, nft-06.png, nft-07.png, nft-08.png,
+           nft-09.png, nft-10.png, nft-11.png, nft-12.png
+All 12 appear in this order. Missing artwork shows a neutral placeholder.
+
+2. OPTIONAL APPLICATION ICONS
+Folder: assets/icons/custom/
+About us:             about_us.png
+Whitelist Application: wl_application.png
+MAXXERS NFT:          maxxers_nft.png
+$MAXXER:              maxxers_token.png
+MAXX IN:              maxx_in.png
+MAXX LEAGUE:          maxx_league.png
+Dashboard:            dashboard.png
+MAXX OUT:             maxx_out.png
+Discord:              discord.png
+X:                    x.png
+OpenSea:              opensea.png
+FAQ:                  faq.png
+
+Only add the custom icons you want. An absent or unreadable custom icon
+falls back to the original icon automatically, across the desktop, Start
+menu, taskbar and app windows. Keep all original assets/icons files.
+The favicon stays on the bundled original icon.
+
+3. FILE FORMAT
+Use real PNG images with the exact lowercase filenames above.
+Export/convert JPG or WebP to PNG; do not just change the extension.
+NFTs: square recommended, around 1000x1000.
+Icons: square transparent PNG recommended, 128x128 or larger.
+Images are fitted without cropping.
+
+4. INSTALLATION
+Extract this entire ZIP and use its index.html, css, js and assets folders.
+The new js/asset-loader.js file is required for image fallback behavior.
+After adding images, refresh the page. If old images are cached, hard refresh
+(Cmd+Shift+R on Mac, Ctrl+Shift+R on Windows).
+
+Whitelist backend setup is unchanged; see README.md.
