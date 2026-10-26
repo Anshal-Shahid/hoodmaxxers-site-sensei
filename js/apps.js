@@ -243,10 +243,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // GOOGLE FORMS SETUP: replace the URL and six entry IDs below.
   const WL_GOOGLE_FORM = {
-    formURL: 'https://docs.google.com/forms/d/e/1FAIpQLSc1HGo6fM9YXmsdSDboyvW8YZW7jnEgEHN6SkbEIrsxjmZVBQ/formResponse', 
+    formURL: 'https://docs.google.com/forms/d/e/1FAIpQLSc1HGo6fM9YXmsdSDboyvW8YZW7jnEgEHN6SkbEIrsxjmZVBQ/formResponse',
     entries: {
-      wallet: 'entry.1421635410',       
-    
+      wallet: 'entry.1421635410',
+
     }
   };
   const form = document.getElementById('wl-form-container');
@@ -314,17 +314,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (submit.disabled) return;
       const config = WL_GOOGLE_FORM;
       if (!/^https:\/\/docs\.google\.com\/forms\/d\/e\/[^/]+\/formResponse$/.test(config.formURL)
-          || !Object.values(config.entries).every(id => /^entry\.\d+$/.test(id))) {
+        || !Object.values(config.entries).every(id => /^entry\.\d+$/.test(id))) {
         feedback.textContent = 'Applications are not open yet. Please check back soon.';
         return;
       }
       const formData = new FormData();
       formData.append(config.entries.wallet, wallet.value.trim());
-      formData.append(config.entries.taggedUsers, 'Yes');
-      formData.append(config.entries.followX, 'Yes');
-      formData.append(config.entries.repost, 'Yes');
-      formData.append(config.entries.discord, 'Yes');
-      formData.append(config.entries.submittedAt, new Date().toISOString());
       sending = true;
       updateTasks();
       submit.textContent = 'SUBMITTING...';
@@ -332,8 +327,10 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         await fetch(config.formURL, { method: 'POST', body: formData, mode: 'no-cors' });
         // Google Forms returns an opaque response; acceptance cannot be verified.
-        feedback.textContent = 'Application sent. Receipt could not be verified automatically.';
-        form.reset();
+        feedback.textContent = '✓ Your whitelist application has been sent. Thank you!';
+        feedback.style.cssText =
+          'margin-top:12px;padding:12px;background:#dcfce7;color:#166534;' +
+          'border:1px solid #86efac;border-radius:6px;font-weight:bold;';
       } catch (error) {
         feedback.textContent = 'Could not send your application. Please try again.';
       } finally {
