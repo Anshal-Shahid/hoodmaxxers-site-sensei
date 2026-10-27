@@ -301,7 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
       submit.disabled = sending || !checks.every(el => el.checked);
     }
     // Social tasks unlock only after their link has been opened.
-    [0, 1, 2].forEach(index => {
+    [0, 1, 2, 3].forEach(index => {
       const link = rows[index].querySelector('a');
       link.addEventListener('click', event => {
         if (rows[index].inert || sending) {
