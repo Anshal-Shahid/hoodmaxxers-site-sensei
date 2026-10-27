@@ -1815,3 +1815,60 @@
 
 /* Completion is driven by link visits and valid inputs. */
 #wl-form-container .wl-checkbox { display: none; }
+
+/* Classic web notice: solid navy, square bevel and monospace lettering. */
+.badge-tokenomics-soon {
+ background: #000080; color: #fff; animation: none;
+ border: 2px solid; border-color: #fff #404040 #404040 #fff;
+ border-radius: 0; box-shadow: 1px 1px 0 #000;
+ font-family: "Courier New", monospace; font-size: 16px;
+ letter-spacing: 1px; line-height: 1.5; padding: 12px;
+}
+.badge-tokenomics-soon span:first-child,
+.badge-tokenomics-soon span:last-child { display: none; }
+.badge-tokenomics-soon::before { content: "[!]"; color: #ffff00; flex-shrink: 0; }
+@media (max-width: 768px) {
+ .window-content { min-height: 0; overflow: auto; overscroll-behavior: contain; overflow-wrap: anywhere; }
+ .window-content img { max-width: 100%; }
+ .window-title { min-width: 0; }
+ .window-title span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+ .window-titlebar, .window-menubar, .window-statusbar { flex-shrink: 0; }
+ .window-controls { flex-shrink: 0; }
+ .window-btn { min-width: 32px; min-height: 32px; }
+ .window-statusbar { flex-wrap: wrap; gap: 4px; }
+ .nft-showcase-layout, #win-nft .nft-showcase-layout { grid-template-columns: minmax(0, 1fr); }
+ #win-nft .nft-cards-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-height: none; overflow: visible; }
+ .nft-showcase-layout > * { min-width: 0; }
+ .wl-task-item { flex-direction: column; align-items: stretch !important; gap: 12px; }
+ .wl-task-left { min-width: 0; width: 100%; }
+ #win-whitelist .wl-task-item > a { margin-left: 0; text-align: center; min-height: 44px; display: grid; place-items: center; }
+ #wl-form-container input[type="text"] { font-size: 16px !important; min-height: 44px; box-sizing: border-box; }
+ #btn-submit-whitelist { width: 100%; min-height: 44px; }
+ .faq-question { min-height: 44px; }
+ .badge-tokenomics-soon { font-size: 14px; letter-spacing: 0; }
+}
+
+/* Final override: classic 1990s website notice. */
+#win-token .badge-tokenomics-soon {
+ background: #c0c0c0 !important;
+ background-image: none !important;
+ color: #000080 !important;
+ border: 3px solid !important;
+ border-color: #ffffff #404040 #404040 #ffffff !important;
+ border-radius: 0 !important;
+ box-shadow: 1px 1px 0 #000 !important;
+ animation: none !important;
+ text-shadow: none !important;
+ font-family: "Courier New", Courier, monospace !important;
+ font-size: 16px !important;
+ font-weight: bold !important;
+ letter-spacing: 0 !important;
+ line-height: 1.5 !important;
+ padding: 14px 10px !important;
+}
+#win-token .badge-tokenomics-soon::before {
+ content: "[ i ]" !important;
+ color: #000080 !important;
+}
+#win-token .badge-tokenomics-soon span:first-child,
+#win-token .badge-tokenomics-soon span:last-child { display: none !important; }
