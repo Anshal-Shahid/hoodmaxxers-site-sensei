@@ -254,14 +254,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const wallet = document.getElementById('wl-wallet-input');
     // POST SETUP: paste the exact X post URL here.
     // Without a post URL, the existing profile link is used.
-    const WL_POST_URL = '';
+    const WL_POST_URL = 'https://x.com/HoodMaxxers/status/2115101398488723549';
     const postLink = document.getElementById('btn-task-3');
     const repostLink = document.getElementById('btn-task-2');
     if (WL_POST_URL) {
       repostLink.href = WL_POST_URL;
       const match = WL_POST_URL.match(/status\/(\d+)/);
       postLink.href = match
-        ? 'https://twitter.com/intent/tweet?in_reply_to=' + match[1]
+        ? 'https://twitter.com/intent/tweet?in_reply_to=2115101398488723549' + match[1]
         : WL_POST_URL;
       //https://x.com/intent/tweet?in_reply_to=2114652006963102138
     } else {
