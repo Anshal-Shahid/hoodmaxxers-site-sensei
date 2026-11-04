@@ -237,120 +237,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnPlaceOrder) {
     btnPlaceOrder.addEventListener('click', () => {
       if (window.RetroSound) window.RetroSound.buzzer();
-      alert('⚠️ MAXX LEAGUE PRE-SEASON ACTIVE\n\nTrading orders are currently disabled until Season 1 officially commences.\n\nMake sure to complete your Whitelist Application and MAXX IN your NFT to receive rarity-based MAXX CASH!');
+      alert('⚠️ MAXX LEAGUE PRE-SEASON ACTIVE\n\nTrading orders are currently disabled until Season 1 officially commences.\n\nWhitelist applications are now closed. Stay tuned for official updates and MAXX IN your NFT to receive rarity-based MAXX CASH!');
     });
   }
 
   // GOOGLE FORMS SETUP: replace the URL and six entry IDs below.
-  const WL_GOOGLE_FORM = {
-    formURL: 'https://docs.google.com/forms/d/e/1FAIpQLSc1HGo6fM9YXmsdSDboyvW8YZW7jnEgEHN6SkbEIrsxjmZVBQ/formResponse',
-    entries: {
-      wallet: 'entry.1421635410',
-
-    }
-  };
-  const form = document.getElementById('wl-form-container');
-  if (form) {
-    const wallet = document.getElementById('wl-wallet-input');
-    // POST SETUP: paste the exact X post URL here.
-    // Without a post URL, the existing profile link is used.
-    const WL_POST_URL = 'https://x.com/HoodMaxxers/status/2115101398488723549';
-    const postLink = document.getElementById('btn-task-3');
-    const repostLink = document.getElementById('btn-task-2');
-    if (WL_POST_URL) {
-      repostLink.href = WL_POST_URL;
-      const match = WL_POST_URL.match(/status\/(\d+)/);
-      postLink.href = match
-        ? 'https://twitter.com/intent/tweet?in_reply_to=2115101398488723549' + match[1]
-        : WL_POST_URL;
-      //https://x.com/intent/tweet?in_reply_to=2114652006963102138
-    } else {
-      postLink.href = repostLink.href;
-    }
-    const feedback = document.getElementById('wl-feedback');
-    const submit = document.getElementById('btn-submit-whitelist');
-    const rows = Array.from(form.querySelectorAll('.wl-task-item'));
-    const checks = rows.map(row => row.querySelector('.wl-checkbox'));
-    let sending = false;
-    const validWallet = () => wallet.value.trim().length > 0;
-    function updateTasks() {
-      const walletCheck = checks[checks.length - 1];
-      walletCheck.checked = validWallet();
-
-      let unlocked = true;
-
-      rows.forEach((row, i) => {
-        const locked = !unlocked || sending;
-
-        row.classList.toggle('wl-task-locked', locked);
-        row.inert = locked;
-        row.setAttribute('aria-disabled', String(locked));
-
-        row.querySelectorAll('input, button').forEach(el => {
-          el.disabled = locked || el === checks[2] || el === walletCheck;
-        });
-
-        row.querySelectorAll('a').forEach(el => {
-          el.setAttribute('aria-disabled', String(locked));
-          el.tabIndex = locked ? -1 : 0;
-        });
-
-        unlocked = unlocked && checks[i].checked;
-      });
-
-      submit.disabled = sending || !checks.every(el => el.checked);
-    }
-    // Social tasks unlock only after their link has been opened.
-    [0, 1, 2, 3].forEach(index => {
-      const link = rows[index].querySelector('a');
-      link.addEventListener('click', event => {
-        if (rows[index].inert || sending) {
-          event.preventDefault();
-          return;
-        }
-        // Keep the native link navigation and mark the visit.
-        checks[index].checked = true;
-        updateTasks();
-      });
-    });
-    wallet.addEventListener('input', updateTasks);
-    form.addEventListener('click', event => {
-      if (event.target.closest('.wl-task-locked')) event.preventDefault();
-    });
-    async function handleSubmitWhitelist(event) {
-      event.preventDefault();
-      updateTasks();
-      if (submit.disabled) return;
-      const config = WL_GOOGLE_FORM;
-      if (!/^https:\/\/docs\.google\.com\/forms\/d\/e\/[^/]+\/formResponse$/.test(config.formURL)
-        || !Object.values(config.entries).every(id => /^entry\.\d+$/.test(id))) {
-        feedback.textContent = 'Applications are not open yet. Please check back soon.';
-        return;
-      }
-      const formData = new FormData();
-      formData.append(config.entries.wallet, wallet.value.trim());
-      sending = true;
-      updateTasks();
-      submit.textContent = 'SUBMITTING...';
-      feedback.textContent = '';
-      try {
-        await fetch(config.formURL, { method: 'POST', body: formData, mode: 'no-cors' });
-        // Google Forms returns an opaque response; acceptance cannot be verified.
-        feedback.textContent = '✓ Your whitelist application has been sent. Thank you!';
-        feedback.style.cssText =
-          'margin-top:12px;padding:12px;background:#dcfce7;color:#166534;' +
-          'border:1px solid #86efac;border-radius:6px;font-weight:bold;';
-      } catch (error) {
-        feedback.textContent = 'Could not send your application. Please try again.';
-      } finally {
-        sending = false;
-        submit.textContent = 'SUBMIT APPLICATION';
-        updateTasks();
-      }
-    }
-    form.addEventListener('submit', handleSubmitWhitelist);
-    updateTasks();
-  }
+  // Whitelist applications are closed. The popup is informational only;
+  // no input fields, tasks, or submission handlers are active.
 
   // Native buttons support mouse, touch, Enter and Space.
   const nftCards = document.querySelectorAll('.nft-card-item');
