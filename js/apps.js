@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const submit = document.getElementById('btn-submit-whitelist');
     const feedback = document.getElementById('wl-feedback');
     let sending = false;
-    const postURL = 'https://x.com/HoodMaxxers/status/2115101398488723549';
+    const postURL = 'https://x.com/HoodMaxxers/status/2119080033562292349';
     document.getElementById('btn-task-2').href = postURL;
     document.getElementById('btn-task-3').href = postURL;
     function refresh() {
