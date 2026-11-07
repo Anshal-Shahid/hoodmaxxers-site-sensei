@@ -193,13 +193,51 @@
       elp
      </span>
     </div>
-    <div class="window-content" style="padding: 30px 20px; text-align: center;">
-     <div role="status" aria-live="polite" style="max-width: 470px; margin: 0 auto; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 32px 24px;">
-      <div style="width: 54px; height: 54px; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; border-radius: 50%; background: #e2e8f0; color: #334155; font-size: 26px;" aria-hidden="true">✓</div>
-      <h3 style="font-size: 21px; font-weight: 800; color: #0f172a; margin: 0 0 12px;">Whitelist Applications Are Now Closed</h3>
-      <p style="font-size: 13px; line-height: 1.7; color: #475569; margin: 0 0 14px;">The Hood Maxxers whitelist application period has officially ended. Thank you to everyone who participated!</p>
-      <p style="font-size: 12px; line-height: 1.6; color: #64748b; margin: 0;">Stay connected through our official channels for future announcements and updates.</p>
+    <div class="window-content" style="padding: 16px;">
+     <div class="wl-intro">
+      <h3>Hood Maxxers Applications</h3>
+      <p>Choose one of two ways to participate. FCFS is for completing the community tasks; GTD is for sharing your CHADest NFT story.</p>
      </div>
+     <div class="wl-apply-tabs" role="tablist" aria-label="Application type">
+      <button type="button" class="win-button wl-tab is-active" id="wl-tab-fcfs" role="tab" aria-controls="wl-panel-fcfs" aria-selected="true">FCFS — TASKS</button>
+      <button type="button" class="win-button wl-tab" id="wl-tab-gtd" role="tab" aria-controls="wl-panel-gtd" aria-selected="false">APPLY FOR GTD</button>
+     </div>
+     <section id="wl-panel-fcfs" role="tabpanel" aria-labelledby="wl-tab-fcfs">
+      <p class="wl-panel-note">Complete the tasks below to apply for a first-come, first-served spot.</p>
+      <form id="wl-form-container" novalidate>
+       <div class="wl-tasks-wrapper">
+        <div class="wl-task-item">
+         <div class="wl-task-left"><input type="checkbox" class="wl-checkbox" id="chk-task-1" aria-label="Follow task visited" disabled><div><div class="wl-task-title">1. Follow @HoodMaxxers on X</div><div class="wl-task-desc">Follow the official Hood Maxxers account.</div></div></div>
+         <a id="btn-task-1" class="win-button btn-primary" href="https://x.com/HoodMaxxers" target="_blank" rel="noopener noreferrer">Follow on X</a>
+        </div>
+        <div class="wl-task-item">
+         <div class="wl-task-left"><input type="checkbox" class="wl-checkbox" id="chk-task-2" aria-label="Post visited" disabled><div><div class="wl-task-title">2. Like &amp; Repost</div><div class="wl-task-desc">Like and repost the official announcement.</div></div></div>
+         <a id="btn-task-2" class="win-button" href="https://x.com/HoodMaxxers/status/2115101398488723549" target="_blank" rel="noopener noreferrer">View Post</a>
+        </div>
+        <div class="wl-task-item">
+         <div class="wl-task-left"><input type="checkbox" class="wl-checkbox" id="chk-task-3" aria-label="Reply link visited" disabled><div><div class="wl-task-title">3. Tag 3 MAXXERS</div><div class="wl-task-desc">Tag three fellow maxxers in a reply to the post.</div></div></div>
+         <a id="btn-task-3" class="win-button" href="https://x.com/HoodMaxxers/status/2115101398488723549" target="_blank" rel="noopener noreferrer">Comment on Post</a>
+        </div>
+        <div class="wl-task-item">
+         <div class="wl-task-left"><input type="checkbox" class="wl-checkbox" id="chk-task-4" aria-label="Wallet entered" disabled><div class="wl-wallet-field"><div class="wl-task-title">4. Submit Wallet</div><div class="wl-task-desc">Enter the wallet address you want considered.</div><input id="wl-wallet-input" aria-label="FCFS wallet address" type="text" placeholder="Enter your wallet address" autocomplete="off" required></div></div>
+        </div>
+       </div>
+       <div class="wl-submit-row"><button class="win-button btn-primary wl-submit" id="btn-submit-whitelist" type="submit" disabled>SUBMIT FCFS APPLICATION</button></div>
+       <p id="wl-feedback" class="wl-feedback" role="status" aria-live="polite"></p>
+      </form>
+     </section>
+     <section id="wl-panel-gtd" role="tabpanel" aria-labelledby="wl-tab-gtd" hidden>
+      <p class="wl-panel-note">Tell us about your CHADest moment in the NFT space. Selected applicants will be contacted via DM on X.</p>
+      <form id="gtd-form-container" novalidate>
+       <div class="wl-tasks-wrapper">
+        <div class="wl-task-item"><div class="wl-task-left"><div class="wl-wallet-field"><div class="wl-task-title">What was your CHADest moment or experience here in the NFT space?</div><div class="wl-task-desc">Share your story below.</div><textarea id="gtd-story" rows="5" maxlength="3000" placeholder="Tell us your story..." required></textarea></div></div></div>
+        <div class="wl-task-item"><div class="wl-task-left"><div class="wl-wallet-field"><div class="wl-task-title">Your Wallet Address</div><input id="gtd-wallet" type="text" placeholder="Enter your wallet address" autocomplete="off" required></div></div></div>
+        <div class="wl-task-item"><div class="wl-task-left"><div class="wl-wallet-field"><div class="wl-task-title">Your X Username</div><div class="wl-task-desc">So we know who to DM if you are approved.</div><input id="gtd-x-handle" type="text" placeholder="@username" autocomplete="off" required></div></div></div>
+       </div>
+       <div class="wl-submit-row"><button class="win-button btn-primary wl-submit" id="btn-submit-gtd" type="submit">SUBMIT GTD APPLICATION</button></div>
+       <p id="gtd-feedback" class="wl-feedback" role="status" aria-live="polite"></p>
+      </form>
+     </section>
     </div>
     <div class="window-statusbar">
      <span>
@@ -725,11 +763,11 @@
       </div>
      </div>
      <p style="font-size: 12px; color: #94a3b8; max-width: 380px; margin: 0 auto 16px auto; line-height: 1.5;">
-      Our official OpenSea marketplace collection is currently being prepared alongside our artist collective. Whitelist applications are now closed. Stay tuned for official updates.
+      Our official OpenSea marketplace collection is currently being prepared alongside our artist collective. Complete the Whitelist Application for a FCFS spot.
      </p>
      <div style="display: flex; justify-content: center; gap: 10px;">
       <button class="win-button btn-primary" onclick="window.OSWindowManager.openWindow('win-whitelist'); window.OSWindowManager.closeWindow('win-opensea');" style="background: #0284c7; color: #fff; padding: 6px 14px;">
-       View Whitelist Status
+       Apply for Whitelist
       </button>
       <button class="win-button" onclick="window.OSWindowManager.closeWindow('win-opensea');" style="padding: 6px 14px;">
        Close
@@ -863,14 +901,18 @@
       <div class="faq-item">
        <div class="faq-question">
         <span>
-         6. Are whitelist applications still open?
+         6. How do I get on the Whitelist?
         </span>
         <span class="faq-arrow">
          ▼
         </span>
        </div>
        <div class="faq-answer">
-        No. Hood Maxxers whitelist applications have officially closed. Check the Whitelist Application window and our official channels for updates.
+        Open the
+        <strong>
+         Whitelist Application
+        </strong>
+        from your desktop or taskbar, complete the 5 community tasks (Follow on X, Like/Repost, Tag 3 Maxxers, Join Discord, and submit your wallet address), and submit your application.
        </div>
       </div>
       <!-- FAQ 7 -->

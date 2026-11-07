@@ -237,13 +237,108 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnPlaceOrder) {
     btnPlaceOrder.addEventListener('click', () => {
       if (window.RetroSound) window.RetroSound.buzzer();
-      alert('⚠️ MAXX LEAGUE PRE-SEASON ACTIVE\n\nTrading orders are currently disabled until Season 1 officially commences.\n\nWhitelist applications are now closed. Stay tuned for official updates and MAXX IN your NFT to receive rarity-based MAXX CASH!');
+      alert('⚠️ MAXX LEAGUE PRE-SEASON ACTIVE\n\nTrading orders are currently disabled until Season 1 officially commences.\n\nMake sure to complete your Whitelist Application and MAXX IN your NFT to receive rarity-based MAXX CASH!');
     });
   }
 
-  // GOOGLE FORMS SETUP: replace the URL and six entry IDs below.
-  // Whitelist applications are closed. The popup is informational only;
-  // no input fields, tasks, or submission handlers are active.
+  // FCFS uses the existing live Google Form (wallet field only).
+  const WL_GOOGLE_FORM = {
+    formURL: 'https://docs.google.com/forms/d/e/1FAIpQLSdyNhJEVVfU3vYisiJUSmxJNjIy3g78y8lmECjjVzWZUtRKNw/formResponse',
+    entries: { wallet: 'entry.1643935123' }
+  };
+  // IMPORTANT: GTD requires a NEW Google Form with 3 questions: story, wallet, X handle.
+  // Replace the placeholders below with its formResponse URL and entry IDs before going live.
+  const GTD_GOOGLE_FORM = {
+    formURL: 'https://docs.google.com/forms/d/e/1FAIpQLScdYx2quhdjHlt3uFSNNBQ06NRFUmT2_sutPx_9yMi3ex25lA/formResponse',
+    entries: { story: 'entry.1611260614', wallet: 'entry.413195611', xHandle: 'entry.275103923' }
+  };
+  const configured = cfg => /^https:\/\/docs\.google\.com\/forms\/d\/e\/[^/]+\/formResponse$/.test(cfg.formURL)
+    && Object.values(cfg.entries).every(id => /^entry\.\d+$/.test(id));
+  const showFeedback = (el, message, ok = false) => {
+    el.textContent = message;
+    el.classList.toggle('wl-feedback-success', ok);
+  };
+  const tabs = [document.getElementById('wl-tab-fcfs'), document.getElementById('wl-tab-gtd')];
+  const panels = [document.getElementById('wl-panel-fcfs'), document.getElementById('wl-panel-gtd')];
+  tabs.forEach((tab, i) => tab?.addEventListener('click', () => {
+    tabs.forEach((t, j) => { t.classList.toggle('is-active', i === j); t.setAttribute('aria-selected', String(i === j)); panels[j].hidden = i !== j; });
+  }));
+  const fcfs = document.getElementById('wl-form-container');
+  if (fcfs) {
+    const rows = [...fcfs.querySelectorAll('.wl-task-item')];
+    const checks = rows.map(row => row.querySelector('.wl-checkbox'));
+    const wallet = document.getElementById('wl-wallet-input');
+    const submit = document.getElementById('btn-submit-whitelist');
+    const feedback = document.getElementById('wl-feedback');
+    let sending = false;
+    const postURL = 'https://x.com/HoodMaxxers/status/2115101398488723549';
+    document.getElementById('btn-task-2').href = postURL;
+    document.getElementById('btn-task-3').href = postURL;
+    function refresh() {
+      checks[3].checked = !!wallet.value.trim();
+      let unlocked = true;
+      rows.forEach((row, i) => {
+        const locked = !unlocked || sending;
+        row.classList.toggle('wl-task-locked', locked);
+        row.inert = locked;
+        row.setAttribute('aria-disabled', String(locked));
+        row.querySelectorAll('a').forEach(link => link.tabIndex = locked ? -1 : 0);
+        if (i === 3) wallet.disabled = locked;
+        unlocked = unlocked && checks[i].checked;
+      });
+      submit.disabled = sending || !checks.every(c => c.checked);
+    }
+    rows.slice(0, 3).forEach((row, i) => {
+      row.querySelector('a').addEventListener('click', event => {
+        if (row.inert) { event.preventDefault(); return; }
+        checks[i].checked = true; // Indicates link opened; cannot verify social action.
+        refresh();
+      });
+    });
+    wallet.addEventListener('input', refresh);
+    fcfs.addEventListener('submit', async event => {
+      event.preventDefault();
+      refresh();
+      if (submit.disabled) return;
+      if (!configured(WL_GOOGLE_FORM)) { showFeedback(feedback, 'FCFS submission is not configured yet.'); return; }
+      const data = new FormData();
+      data.append(WL_GOOGLE_FORM.entries.wallet, wallet.value.trim());
+      sending = true; refresh(); submit.textContent = 'SUBMITTING...';
+      try {
+        await fetch(WL_GOOGLE_FORM.formURL, { method: 'POST', mode: 'no-cors', body: data });
+        showFeedback(feedback, 'Your FCFS application was sent. Please follow our X account for updates.', true);
+      } catch (_) { showFeedback(feedback, 'Submission could not be sent. Please retry.'); }
+      finally { sending = false; refresh(); submit.textContent = 'SUBMIT FCFS APPLICATION'; }
+    });
+    refresh();
+  }
+  const gtd = document.getElementById('gtd-form-container');
+  if (gtd) {
+    const story = document.getElementById('gtd-story');
+    const wallet = document.getElementById('gtd-wallet');
+    const xHandle = document.getElementById('gtd-x-handle');
+    const submit = document.getElementById('btn-submit-gtd');
+    const feedback = document.getElementById('gtd-feedback');
+    gtd.addEventListener('submit', async event => {
+      event.preventDefault();
+      if (!story.value.trim() || !wallet.value.trim() || !xHandle.value.trim()) {
+        showFeedback(feedback, 'Please complete your story, wallet address, and X username.'); return;
+      }
+      if (!configured(GTD_GOOGLE_FORM)) {
+        showFeedback(feedback, 'GTD applications are not connected yet. Please check back soon.'); return;
+      }
+      const data = new FormData();
+      data.append(GTD_GOOGLE_FORM.entries.story, story.value.trim());
+      data.append(GTD_GOOGLE_FORM.entries.wallet, wallet.value.trim());
+      data.append(GTD_GOOGLE_FORM.entries.xHandle, xHandle.value.trim());
+      submit.disabled = true; submit.textContent = 'SUBMITTING...';
+      try {
+        await fetch(GTD_GOOGLE_FORM.formURL, { method: 'POST', mode: 'no-cors', body: data });
+        showFeedback(feedback, 'Your application was sent. If approved, you’ll receive a DM on X. Please follow @HoodMaxxers and keep your DMs open.', true);
+      } catch (_) { showFeedback(feedback, 'Submission could not be sent. Please retry.'); }
+      finally { submit.disabled = false; submit.textContent = 'SUBMIT GTD APPLICATION'; }
+    });
+  }
 
   // Native buttons support mouse, touch, Enter and Space.
   const nftCards = document.querySelectorAll('.nft-card-item');

@@ -1872,3 +1872,22 @@
 }
 #win-token .badge-tokenomics-soon span:first-child,
 #win-token .badge-tokenomics-soon span:last-child { display: none !important; }
+
+/* FCFS and GTD use the same Windows-era task cards as the original WL application. */
+#win-whitelist .wl-intro { background:#f8fafc; border:1px solid #cbd5e1; padding:12px; border-radius:6px; margin-bottom:12px; }
+#win-whitelist .wl-intro h3 {font-size:13px;color:#1e293b;margin:0 0 4px;}
+#win-whitelist .wl-intro p, #win-whitelist .wl-panel-note {font-size:11px;color:#64748b;line-height:1.55;margin:0 0 12px;}
+#win-whitelist .wl-apply-tabs {display:flex;gap:8px;margin:0 0 12px;}
+#win-whitelist .wl-tab {flex:1;min-height:35px;font-size:11px;font-weight:bold;cursor:pointer;}
+#win-whitelist .wl-tab.is-active {background:#000080;color:white;}
+#win-whitelist [hidden] {display:none !important;}
+#win-whitelist .wl-task-item a {font-size:10px;padding:6px 10px;text-decoration:none;}
+#win-whitelist .wl-wallet-field {flex:1;min-width:0;width:100%;}
+#win-whitelist .wl-wallet-field input, #win-whitelist .wl-wallet-field textarea {width:100%;box-sizing:border-box;margin-top:6px;padding:8px;border:1px solid #808080;border-radius:0;background:#fff;color:#1e293b;font:12px 'Courier New',monospace;}
+#win-whitelist .wl-wallet-field textarea {resize:vertical;line-height:1.5;}
+#win-whitelist .wl-submit-row {border-top:1px solid #cbd5e1;margin-top:14px;padding-top:12px;}
+#win-whitelist .wl-submit {padding:8px 18px;font-size:12px;font-weight:bold;background:#15803d;color:white;}
+#win-whitelist .wl-submit:disabled {opacity:.45;cursor:not-allowed;}
+#win-whitelist .wl-feedback {font-size:11px;margin-top:10px;color:#9a3412;line-height:1.5;}
+#win-whitelist .wl-feedback-success {color:#166534;background:#dcfce7;border:1px solid #86efac;padding:10px;}
+@media(max-width:600px) {#win-whitelist .wl-apply-tabs {flex-direction:column;}#win-whitelist .wl-wallet-field input,#win-whitelist .wl-wallet-field textarea {font-size:16px;}#win-whitelist .wl-submit {width:100%;min-height:44px;}}
